@@ -13,6 +13,7 @@ namespace SpaceInvaders.ViewModels
         #region Atributos
         private ObservableCollection<String> _mDificultades;
         private DelegateCommand _cerrarAbrirSplit;
+        private DelegateCommand _backCerrarSplit;
         private int _mIndexDificultadSeleccionada;
         private double _mVolumeMedia;
         private int _mVolumeSlider;
@@ -25,7 +26,7 @@ namespace SpaceInvaders.ViewModels
             getLevels();
             _splitAbierto = false;
             _mVolumeMedia = 1;
-            _mVolumeSlider =(int)((_mVolumeMedia-(int)_mVolumeMedia)*100);
+            _mVolumeSlider =100;
             NotifyPropertyChanged("mVolumeMedia");
             NotifyPropertyChanged("mVolumeSlider");
         }
@@ -34,6 +35,20 @@ namespace SpaceInvaders.ViewModels
         #endregion
 
         #region Propiedades Publicas
+
+        public DelegateCommand backCerrarSplit
+        {
+            set
+            {
+                _backCerrarSplit = value;
+                
+            }
+            get
+            {
+                _backCerrarSplit = new DelegateCommand(ExecuteCerrarSplit);
+                return _backCerrarSplit;
+            }
+        }
         public bool splitAbierto
         {
             set
@@ -67,11 +82,7 @@ namespace SpaceInvaders.ViewModels
                 NotifyPropertyChanged("mDificultades");
             }
         }
-        public void ExecuteSplit()
-        {
-            _splitAbierto = !_splitAbierto;
-            NotifyPropertyChanged("splitAbierto");
-        }
+
         public int mIndexDificultadSeleccionada
         {
             get { return this._mIndexDificultadSeleccionada; }
@@ -119,6 +130,16 @@ namespace SpaceInvaders.ViewModels
 
             NotifyPropertyChanged("mIndexDificultadSeleccionada");
             NotifyPropertyChanged("mDificultades");
+        }
+        public void ExecuteSplit()
+        {
+            _splitAbierto = !_splitAbierto;
+            NotifyPropertyChanged("splitAbierto");
+        }
+        public void ExecuteCerrarSplit()
+        {
+            _splitAbierto = false;
+            NotifyPropertyChanged("splitAbierto");
         }
     }
 }

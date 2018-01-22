@@ -10579,7 +10579,7 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "2RI4q8FfR0S50V4YdZIZtzfyA2Bo4+jJHQXG+TDN7D4mPrFiIswIq8HVeDWS9xZsDwz23z7d/T2qi4rZa60Sig==",
+      "sha512": "svqEclOg2g3pmsVen1/sCCsozefwISlHQcB/Y5yxqovG6tx+LIxN0XtGH4XSieLbf5PbzVIXmHoPPrWb0QhuaA==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
@@ -14841,20 +14841,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pjarana\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\Capas\\Entities\\Entities.csproj",
+      "projectUniqueName": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\Capas\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\Capas\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\pjarana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\Capas\\Entities\\obj\\",
+      "projectPath": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\Capas\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\Capas\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\pjarana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

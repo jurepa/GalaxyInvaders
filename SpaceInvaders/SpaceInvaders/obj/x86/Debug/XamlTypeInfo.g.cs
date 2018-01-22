@@ -136,8 +136,8 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
             _typeNameTable[0] = "SpaceInvaders.ViewModels.MainPageGameVM";
             _typeNameTable[1] = "SpaceInvaders.ViewModels.clsVMBase";
             _typeNameTable[2] = "Object";
-            _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "SpaceInvaders.ViewModels.DelegateCommand";
+            _typeNameTable[3] = "SpaceInvaders.ViewModels.DelegateCommand";
+            _typeNameTable[4] = "Boolean";
             _typeNameTable[5] = "System.Collections.ObjectModel.ObservableCollection`1<String>";
             _typeNameTable[6] = "System.Collections.ObjectModel.Collection`1<String>";
             _typeNameTable[7] = "String";
@@ -151,8 +151,8 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
             _typeTable[0] = typeof(global::SpaceInvaders.ViewModels.MainPageGameVM);
             _typeTable[1] = typeof(global::SpaceInvaders.ViewModels.clsVMBase);
             _typeTable[2] = typeof(global::System.Object);
-            _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::SpaceInvaders.ViewModels.DelegateCommand);
+            _typeTable[3] = typeof(global::SpaceInvaders.ViewModels.DelegateCommand);
+            _typeTable[4] = typeof(global::System.Boolean);
             _typeTable[5] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.String>);
             _typeTable[6] = typeof(global::System.Collections.ObjectModel.Collection<global::System.String>);
             _typeTable[7] = typeof(global::System.String);
@@ -225,6 +225,7 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
             case 0:   //  SpaceInvaders.ViewModels.MainPageGameVM
                 userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("SpaceInvaders.ViewModels.clsVMBase"));
                 userType.Activator = Activate_0_MainPageGameVM;
+                userType.AddMemberName("backCerrarSplit");
                 userType.AddMemberName("splitAbierto");
                 userType.AddMemberName("cerrarAbrirSplit");
                 userType.AddMemberName("mDificultades");
@@ -245,15 +246,15 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
                 xamlType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Boolean
-                xamlType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 4:   //  SpaceInvaders.ViewModels.DelegateCommand
+            case 3:   //  SpaceInvaders.ViewModels.DelegateCommand
                 userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
+                break;
+
+            case 4:   //  Boolean
+                xamlType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 5:   //  System.Collections.ObjectModel.ObservableCollection`1<String>
@@ -301,62 +302,72 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
         }
 
 
-        private object get_0_MainPageGameVM_splitAbierto(object instance)
+        private object get_0_MainPageGameVM_backCerrarSplit(object instance)
+        {
+            var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
+            return that.backCerrarSplit;
+        }
+        private void set_0_MainPageGameVM_backCerrarSplit(object instance, object Value)
+        {
+            var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
+            that.backCerrarSplit = (global::SpaceInvaders.ViewModels.DelegateCommand)Value;
+        }
+        private object get_1_MainPageGameVM_splitAbierto(object instance)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             return that.splitAbierto;
         }
-        private void set_0_MainPageGameVM_splitAbierto(object instance, object Value)
+        private void set_1_MainPageGameVM_splitAbierto(object instance, object Value)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             that.splitAbierto = (global::System.Boolean)Value;
         }
-        private object get_1_MainPageGameVM_cerrarAbrirSplit(object instance)
+        private object get_2_MainPageGameVM_cerrarAbrirSplit(object instance)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             return that.cerrarAbrirSplit;
         }
-        private void set_1_MainPageGameVM_cerrarAbrirSplit(object instance, object Value)
+        private void set_2_MainPageGameVM_cerrarAbrirSplit(object instance, object Value)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             that.cerrarAbrirSplit = (global::SpaceInvaders.ViewModels.DelegateCommand)Value;
         }
-        private object get_2_MainPageGameVM_mDificultades(object instance)
+        private object get_3_MainPageGameVM_mDificultades(object instance)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             return that.mDificultades;
         }
-        private void set_2_MainPageGameVM_mDificultades(object instance, object Value)
+        private void set_3_MainPageGameVM_mDificultades(object instance, object Value)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             that.mDificultades = (global::System.Collections.ObjectModel.ObservableCollection<global::System.String>)Value;
         }
-        private object get_3_MainPageGameVM_mIndexDificultadSeleccionada(object instance)
+        private object get_4_MainPageGameVM_mIndexDificultadSeleccionada(object instance)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             return that.mIndexDificultadSeleccionada;
         }
-        private void set_3_MainPageGameVM_mIndexDificultadSeleccionada(object instance, object Value)
+        private void set_4_MainPageGameVM_mIndexDificultadSeleccionada(object instance, object Value)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             that.mIndexDificultadSeleccionada = (global::System.Int32)Value;
         }
-        private object get_4_MainPageGameVM_mVolumeMedia(object instance)
+        private object get_5_MainPageGameVM_mVolumeMedia(object instance)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             return that.mVolumeMedia;
         }
-        private void set_4_MainPageGameVM_mVolumeMedia(object instance, object Value)
+        private void set_5_MainPageGameVM_mVolumeMedia(object instance, object Value)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             that.mVolumeMedia = (global::System.Double)Value;
         }
-        private object get_5_MainPageGameVM_mVolumeSlider(object instance)
+        private object get_6_MainPageGameVM_mVolumeSlider(object instance)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             return that.mVolumeSlider;
         }
-        private void set_5_MainPageGameVM_mVolumeSlider(object instance, object Value)
+        private void set_6_MainPageGameVM_mVolumeSlider(object instance, object Value)
         {
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             that.mVolumeSlider = (global::System.Int32)Value;
@@ -369,41 +380,47 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "SpaceInvaders.ViewModels.MainPageGameVM.backCerrarSplit":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.MainPageGameVM");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "backCerrarSplit", "SpaceInvaders.ViewModels.DelegateCommand");
+                xamlMember.Getter = get_0_MainPageGameVM_backCerrarSplit;
+                xamlMember.Setter = set_0_MainPageGameVM_backCerrarSplit;
+                break;
             case "SpaceInvaders.ViewModels.MainPageGameVM.splitAbierto":
                 userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.MainPageGameVM");
                 xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "splitAbierto", "Boolean");
-                xamlMember.Getter = get_0_MainPageGameVM_splitAbierto;
-                xamlMember.Setter = set_0_MainPageGameVM_splitAbierto;
+                xamlMember.Getter = get_1_MainPageGameVM_splitAbierto;
+                xamlMember.Setter = set_1_MainPageGameVM_splitAbierto;
                 break;
             case "SpaceInvaders.ViewModels.MainPageGameVM.cerrarAbrirSplit":
                 userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.MainPageGameVM");
                 xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "cerrarAbrirSplit", "SpaceInvaders.ViewModels.DelegateCommand");
-                xamlMember.Getter = get_1_MainPageGameVM_cerrarAbrirSplit;
-                xamlMember.Setter = set_1_MainPageGameVM_cerrarAbrirSplit;
+                xamlMember.Getter = get_2_MainPageGameVM_cerrarAbrirSplit;
+                xamlMember.Setter = set_2_MainPageGameVM_cerrarAbrirSplit;
                 break;
             case "SpaceInvaders.ViewModels.MainPageGameVM.mDificultades":
                 userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.MainPageGameVM");
                 xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "mDificultades", "System.Collections.ObjectModel.ObservableCollection`1<String>");
-                xamlMember.Getter = get_2_MainPageGameVM_mDificultades;
-                xamlMember.Setter = set_2_MainPageGameVM_mDificultades;
+                xamlMember.Getter = get_3_MainPageGameVM_mDificultades;
+                xamlMember.Setter = set_3_MainPageGameVM_mDificultades;
                 break;
             case "SpaceInvaders.ViewModels.MainPageGameVM.mIndexDificultadSeleccionada":
                 userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.MainPageGameVM");
                 xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "mIndexDificultadSeleccionada", "Int32");
-                xamlMember.Getter = get_3_MainPageGameVM_mIndexDificultadSeleccionada;
-                xamlMember.Setter = set_3_MainPageGameVM_mIndexDificultadSeleccionada;
+                xamlMember.Getter = get_4_MainPageGameVM_mIndexDificultadSeleccionada;
+                xamlMember.Setter = set_4_MainPageGameVM_mIndexDificultadSeleccionada;
                 break;
             case "SpaceInvaders.ViewModels.MainPageGameVM.mVolumeMedia":
                 userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.MainPageGameVM");
                 xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "mVolumeMedia", "Double");
-                xamlMember.Getter = get_4_MainPageGameVM_mVolumeMedia;
-                xamlMember.Setter = set_4_MainPageGameVM_mVolumeMedia;
+                xamlMember.Getter = get_5_MainPageGameVM_mVolumeMedia;
+                xamlMember.Setter = set_5_MainPageGameVM_mVolumeMedia;
                 break;
             case "SpaceInvaders.ViewModels.MainPageGameVM.mVolumeSlider":
                 userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.MainPageGameVM");
                 xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "mVolumeSlider", "Int32");
-                xamlMember.Getter = get_5_MainPageGameVM_mVolumeSlider;
-                xamlMember.Setter = set_5_MainPageGameVM_mVolumeSlider;
+                xamlMember.Getter = get_6_MainPageGameVM_mVolumeSlider;
+                xamlMember.Setter = set_6_MainPageGameVM_mVolumeSlider;
                 break;
             }
             return xamlMember;

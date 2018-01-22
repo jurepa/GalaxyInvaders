@@ -7,6 +7,7 @@
     <RootPropertyPathName Name="mDificultades" />
     <RootPropertyPathName Name="mDificultadSeleccionada" />
     <RootPropertyPathName Name="mIndexDificultadSeleccionada" />
+    <RootPropertyPathName Name="backCerrarSplit" />
     <RootPropertyPathName Name="cerrarAbrirSplit" />
     <RootPropertyPathName Name="IsOn" />
     <RootPropertyPathName Name="mVolumeMedia" />
@@ -103,6 +104,8 @@
       <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="OnContent" />
+      <RootProperty Name="OffContent" />
       <RootProperty Name="IsOn" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -135,6 +138,7 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Icon" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -155,6 +159,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Background" />
+      <RootProperty Name="MaxLength" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Width" />
