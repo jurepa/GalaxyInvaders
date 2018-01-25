@@ -1,1 +1,0 @@
-E:\_Perfil\Desktop\GitHub\GalaxyInvaders\SpaceInvaders\SpaceInvaders\SpaceInvaders.csproj;x86

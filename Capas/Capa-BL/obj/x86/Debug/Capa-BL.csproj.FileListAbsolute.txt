@@ -1,7 +1,0 @@
-C:\Users\icastillo\Desktop\GitHub\SpaceInvaders\Space-Invaders\SpaceInvaders\Capa-BL\obj\x86\Debug\Capa-BL.csproj.CoreCompileInputs.cache
-\\servidor\Free\Compartir cosas\Segundo\AndGo (Iván)\Capas\Capa-BL\obj\x86\Debug\Capa-BL.csprojResolveAssemblyReference.cache
-\\servidor\Free\Compartir cosas\Segundo\AndGo (Iván)\Capas\Capa-BL\obj\x86\Debug\Capa-BL.csproj.CoreCompileInputs.cache
-C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\Capas\Capa-BL\obj\x86\Debug\Capa-BL.csprojResolveAssemblyReference.cache
-C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\Capas\Capa-BL\obj\x86\Debug\Capa-BL.csproj.CoreCompileInputs.cache
-E:\_Perfil\Desktop\GitHub\GalaxyInvaders\Capas\Capa-BL\obj\x86\Debug\Capa-BL.csprojResolveAssemblyReference.cache
-E:\_Perfil\Desktop\GitHub\GalaxyInvaders\Capas\Capa-BL\obj\x86\Debug\Capa-BL.csproj.CoreCompileInputs.cache
