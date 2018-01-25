@@ -15060,11 +15060,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj",
+      "projectUniqueName": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj",
       "projectName": "Capa-BL",
-      "projectPath": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj",
+      "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj",
       "packagesPath": "C:\\Users\\pjarana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\obj\\",
+      "outputPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -15081,11 +15081,11 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Capa-DAL\\Capa-DAL.csproj": {
-              "projectPath": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Capa-DAL\\Capa-DAL.csproj"
+            "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-DAL\\Capa-DAL.csproj": {
+              "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-DAL\\Capa-DAL.csproj"
             },
-            "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj"
+            "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj"
             }
           }
         }

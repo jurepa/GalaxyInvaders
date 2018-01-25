@@ -14846,11 +14846,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\pjarana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pjarana\\Desktop\\GalaxyInvaders\\SpaceInvaders\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
