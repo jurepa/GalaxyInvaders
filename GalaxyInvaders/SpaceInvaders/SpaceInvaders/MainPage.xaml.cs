@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceInvaders.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace SpaceInvaders
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public MainPageGameVM vMGame { get; } = new MainPageGameVM();
         public MainPage()
         {
             MaximizeWindowOnLoad();
