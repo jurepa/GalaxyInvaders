@@ -3,7 +3,7 @@ using Entities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-//using System.Data.SqlClient;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -133,7 +133,7 @@ namespace Capa_DAL.Gestoras
                 contenido = new HttpStringContent(body, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json");
                 responseMessage = await httpClient.PostAsync(conexion.Server, contenido);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 throw ex;
             }
