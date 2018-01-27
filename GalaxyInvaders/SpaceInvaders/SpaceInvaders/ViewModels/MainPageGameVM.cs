@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace SpaceInvaders.ViewModels
 {
@@ -165,6 +167,15 @@ namespace SpaceInvaders.ViewModels
             MessageDialog instrucciones = new MessageDialog("A y D para moverse y Espacio para disparar. \n" +
                 "Para hacks, preguntar al GodHacker de segundo");
             await instrucciones.ShowAsync();
+        }
+        public void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            var rootFrame = new Frame();
+            rootFrame.Navigate(typeof(Game));
+
+            // Place the frame in the current Window and ensure that it is active
+            Window.Current.Content = rootFrame;
+            Window.Current.Activate();
         }
     }
 }
