@@ -2455,7 +2455,12 @@
       },
       "Capa-BL/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Capa-DAL": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Capa-BL.dll": {}
         },
@@ -2463,9 +2468,28 @@
           "bin/placeholder/Capa-BL.dll": {}
         }
       },
+      "Capa-DAL/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -4965,7 +4989,12 @@
       },
       "Capa-BL/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Capa-DAL": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Capa-BL.dll": {}
         },
@@ -4973,9 +5002,28 @@
           "bin/placeholder/Capa-BL.dll": {}
         }
       },
+      "Capa-DAL/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -7511,7 +7559,12 @@
       },
       "Capa-BL/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Capa-DAL": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Capa-BL.dll": {}
         },
@@ -7519,9 +7572,28 @@
           "bin/placeholder/Capa-BL.dll": {}
         }
       },
+      "Capa-DAL/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -10030,7 +10102,12 @@
       },
       "Capa-BL/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Capa-DAL": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Capa-BL.dll": {}
         },
@@ -10038,9 +10115,28 @@
           "bin/placeholder/Capa-BL.dll": {}
         }
       },
+      "Capa-DAL/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -12585,7 +12681,12 @@
       },
       "Capa-BL/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Capa-DAL": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Capa-BL.dll": {}
         },
@@ -12593,9 +12694,28 @@
           "bin/placeholder/Capa-BL.dll": {}
         }
       },
+      "Capa-DAL/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -15104,7 +15224,12 @@
       },
       "Capa-BL/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Capa-DAL": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Capa-BL.dll": {}
         },
@@ -15112,9 +15237,28 @@
           "bin/placeholder/Capa-BL.dll": {}
         }
       },
+      "Capa-DAL/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -17659,7 +17803,12 @@
       },
       "Capa-BL/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Capa-DAL": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Capa-BL.dll": {}
         },
@@ -17667,9 +17816,28 @@
           "bin/placeholder/Capa-BL.dll": {}
         }
       },
+      "Capa-DAL/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Capa-DAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": "UAP,Version=v10.0.14393",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -27735,6 +27903,11 @@
       "path": "../Capa-BL/Capa-BL.csproj",
       "msbuildProject": "../Capa-BL/Capa-BL.csproj"
     },
+    "Capa-DAL/1.0.0": {
+      "type": "project",
+      "path": "../Capa-DAL/Capa-DAL.csproj",
+      "msbuildProject": "../Capa-DAL/Capa-DAL.csproj"
+    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../Entities/Entities.csproj",
@@ -27820,139 +27993,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\SpaceInvaders\\obj\\SpaceInvaders.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Capa-BL no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393). El proyecto Capa-BL admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Capa-BL",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Entities no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393). El proyecto Entities admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Entities",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Capa-BL no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-arm. El proyecto Capa-BL admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Capa-BL",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-arm"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Entities no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-arm. El proyecto Entities admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Entities",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-arm"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Capa-BL no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-arm-aot. El proyecto Capa-BL admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Capa-BL",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-arm-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Entities no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-arm-aot. El proyecto Entities admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Entities",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-arm-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Capa-BL no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x64. El proyecto Capa-BL admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Capa-BL",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x64"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Entities no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x64. El proyecto Entities admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Entities",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x64"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Capa-BL no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x64-aot. El proyecto Capa-BL admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Capa-BL",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x64-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Entities no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x64-aot. El proyecto Entities admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Entities",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x64-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Capa-BL no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x86. El proyecto Capa-BL admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Capa-BL",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Entities no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x86. El proyecto Entities admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Entities",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Capa-BL no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x86-aot. El proyecto Capa-BL admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Capa-BL",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x86-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "El proyecto Entities no es compatible con uap10.0.14393 (UAP,Version=v10.0.14393) / win10-x86-aot. El proyecto Entities admite: uap10.0.16299 (UAP,Version=v10.0.16299)",
-      "libraryId": "Entities",
-      "targetGraphs": [
-        "UAP,Version=v10.0.14393/win10-x86-aot"
-      ]
-    }
-  ]
+  }
 }
