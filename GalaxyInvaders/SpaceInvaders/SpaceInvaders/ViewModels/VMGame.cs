@@ -15,10 +15,10 @@ namespace SpaceInvaders.ViewModels
         private Double _posX;
         private int _velocidad;
         private Double _posYMisil;
-        private Canvas _canvas;
+        //private Canvas _canvas;
         #endregion
         #region publicos
-        public Canvas canvas
+        /*public Canvas canvas
         {
             get
             {
@@ -28,7 +28,7 @@ namespace SpaceInvaders.ViewModels
             {
                 _canvas = value;
             }
-        }
+        }*/
         public Double posYMisil
         {
             get
@@ -57,9 +57,11 @@ namespace SpaceInvaders.ViewModels
 
         public VMGame()
         {
+            _posYMisil = 540;
             _posX = 450;
             _velocidad = 50;
             NotifyPropertyChanged("posX");
+            NotifyPropertyChanged("posYMisil");
 
         }
 

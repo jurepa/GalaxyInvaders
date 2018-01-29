@@ -550,6 +550,9 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\Logo Inicio Sapce Invaders.png">
       <PackagePath>Assets\Images\Logo Inicio Sapce Invaders.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\MisilPro.png">
+      <PackagePath>Assets\Images\MisilPro.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\options.png">
       <PackagePath>Assets\Images\options.png</PackagePath>
     </AppxPackagedFile>

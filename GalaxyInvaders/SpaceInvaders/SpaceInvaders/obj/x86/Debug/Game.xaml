@@ -15,9 +15,13 @@
     
     <Grid x:ConnectionId='1' x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                             >
         <Border BorderBrush="Blue" BorderThickness="3" MaxHeight="600" MaxWidth="1000" Margin="10">
-            <Canvas MaxHeight="600" MaxWidth="1000">
-                <Image x:ConnectionId='2' x:Name="player" Source="ms-appx:///Assets/Images/AlienNavePro.png" Height="58" Width="72"
-                       Canvas.Left="{Binding posX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="534"  />
+            <Canvas x:ConnectionId='2' x:Name="canvas" Height="600" Width="1000">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Images/Fondo Space Invaders.jpg"/>
+                </Canvas.Background>
+                <Image x:ConnectionId='3' x:Name="player" Source="ms-appx:///Assets/Images/AlienNavePro.png" Height="58" Width="72"
+                       Canvas.Left="{Binding posX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="{Binding posYMisil,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  />
+                <!--<Image x:Name="misil" Source="ms-appx:///Assets/Images/MisilPro.png" Canvas.Top="{Binding posYMisil,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>-->
             </Canvas>
         </Border>
         <!--<TextBox x:Name="text" KeyDown="text_KeyDown" />-->
