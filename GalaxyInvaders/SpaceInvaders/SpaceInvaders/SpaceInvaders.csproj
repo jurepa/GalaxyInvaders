@@ -121,6 +121,7 @@
     <Content Include="Assets\Images\continue.png" />
     <Content Include="Assets\Images\Fondo Space Invaders.jpg" />
     <Content Include="Assets\Images\Logo Inicio Sapce Invaders.png" />
+    <Content Include="Assets\Images\MisilPro.png" />
     <Content Include="Assets\Images\options.png" />
     <Content Include="Assets\Images\play.png" />
     <Content Include="Assets\Images\scores.png" />

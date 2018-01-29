@@ -15,9 +15,10 @@
     
     <Grid x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="allowfocus_Loaded"  >
         <Border BorderBrush="Blue" BorderThickness="3" MaxHeight="600" MaxWidth="1000" Margin="10">
-            <Canvas MaxHeight="600" MaxWidth="1000">
+            <Canvas x:Name="canvas" MaxHeight="600" MaxWidth="1000">
                 <Image x:Name="player" Source="ms-appx:///Assets/Images/AlienNavePro.png" Height="58" Width="72"
-                       Canvas.Left="{Binding posX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="534"  />
+                       Canvas.Left="{Binding posX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="540"  />
+                <!--<Image x:Name="misil" Source="ms-appx:///Assets/Images/MisilPro.png" Canvas.Top="{Binding posYMisil,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>-->
             </Canvas>
         </Border>
         <!--<TextBox x:Name="text" KeyDown="text_KeyDown" />-->

@@ -32,6 +32,7 @@ namespace SpaceInvaders
             this.InitializeComponent();
             //Window.Current.Content.KeyDown += KeyDownEvent;
             vMGame =(VMGame) this.DataContext;
+            vMGame.canvas = this.canvas;
         }     
 
         /*private void KeyDownEvent(object sender, KeyRoutedEventArgs e)
