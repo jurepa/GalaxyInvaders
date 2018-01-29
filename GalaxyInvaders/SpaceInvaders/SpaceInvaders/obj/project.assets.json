@@ -10887,7 +10887,7 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "svqEclOg2g3pmsVen1/sCCsozefwISlHQcB/Y5yxqovG6tx+LIxN0XtGH4XSieLbf5PbzVIXmHoPPrWb0QhuaA==",
+      "sha512": "2RI4q8FfR0S50V4YdZIZtzfyA2Bo4+jJHQXG+TDN7D4mPrFiIswIq8HVeDWS9xZsDwz23z7d/T2qi4rZa60Sig==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
@@ -15166,20 +15166,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\pjarana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\SpaceInvaders\\SpaceInvaders.csproj",
+      "projectUniqueName": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\SpaceInvaders\\SpaceInvaders.csproj",
       "projectName": "SpaceInvaders",
-      "projectPath": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\SpaceInvaders\\SpaceInvaders.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\SpaceInvaders\\obj\\",
+      "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\SpaceInvaders\\SpaceInvaders.csproj",
+      "packagesPath": "C:\\Users\\pjarana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\SpaceInvaders\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pjarana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -15192,11 +15192,11 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj": {
-              "projectPath": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj"
+            "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj": {
+              "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Capa-BL\\Capa-BL.csproj"
             },
-            "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj": {
-              "projectPath": "E:\\_Perfil\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj"
+            "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\SpaceInvaders\\Entities\\Entities.csproj"
             }
           }
         }

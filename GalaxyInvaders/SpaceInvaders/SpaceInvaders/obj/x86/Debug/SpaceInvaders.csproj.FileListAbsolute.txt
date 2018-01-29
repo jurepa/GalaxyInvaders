@@ -895,3 +895,8 @@ E:\_Perfil\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvad
 E:\_Perfil\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\obj\x86\Debug\FxResources.System.Security.Principal.Windows.SR.resw
 E:\_Perfil\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\obj\x86\Debug\FxResources.System.Threading.Thread.SR.resw
 E:\_Perfil\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\obj\x86\Debug\FxResources.System.ValueTuple.SR.resw
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\bin\x86\Debug\Game.xbf
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\obj\x86\Debug\Game.g.i.cs
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\obj\x86\Debug\Game.g.cs
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\obj\x86\Debug\Game.xaml
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\obj\x86\Debug\Game.xbf

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceInvaders.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,12 +25,14 @@ namespace SpaceInvaders
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private MainPageGameVM vm;
         public MainPage()
         {
             MaximizeWindowOnLoad();
 
             this.InitializeComponent();
 
+            vm =(MainPageGameVM) this.DataContext;
             void MaximizeWindowOnLoad()
             {
                 var view = DisplayInformation.GetForCurrentView();
@@ -52,6 +55,8 @@ namespace SpaceInvaders
                 //txtUser.FontFamily = new FontFamily("Assets/Pixel_Emulator.ttf#Pixel Emulator");
             }
         }
+
+
     }
 }
 

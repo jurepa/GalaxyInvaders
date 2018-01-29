@@ -82,7 +82,7 @@
                     <TextBox Background="White" Name="userName2" MaxLength="1" PlaceholderText="S" TextAlignment="Center" Width="20" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True"></TextBox>
                     <TextBox Background="White" Name="userName3" MaxLength="1" PlaceholderText="R" TextAlignment="Center" Width="20"  RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.RightOf="userName2"></TextBox>
 
-                    <Button Name="btnPlay" Margin="50"  RelativePanel.Below="userName2" RelativePanel.AlignHorizontalCenterWithPanel="True"  >
+                    <Button Name="btnPlay" Margin="50"  RelativePanel.Below="userName2" RelativePanel.AlignHorizontalCenterWithPanel="True" Click="{x:Bind vm.btnPlay_Click}"  >
                         <Image Source="Assets\Images\play.png" Width="211" Margin="-20 -20" ></Image>
                     </Button>
                     <Button Name="btnOptions" Margin="30" RelativePanel.Below="txtUser" RelativePanel.LeftOf="btnPlay"  Command="{Binding cerrarAbrirSplit}" RelativePanel.AlignVerticalCenterWith="btnPlay" >
