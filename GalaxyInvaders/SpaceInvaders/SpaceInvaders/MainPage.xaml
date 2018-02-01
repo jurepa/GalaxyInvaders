@@ -89,7 +89,7 @@
                         <Image Source="Assets\Images\options.png" Width="211" Margin="-20 -20" ></Image>
                     </Button>
 
-                    <Button Name="btnScore" Margin="30" RelativePanel.Below="txtUser" RelativePanel.RightOf="btnPlay" RelativePanel.AlignVerticalCenterWith="btnPlay" >
+                    <Button Name="btnScore" Margin="30" RelativePanel.Below="txtUser" RelativePanel.RightOf="btnPlay" RelativePanel.AlignVerticalCenterWith="btnPlay" Click="{x:Bind vm.btnscore}" >
                         <Image Source="Assets\Images\scores.png" Width="211" Margin="-20 -20"></Image>
                     </Button>
                     <!--<Button Name="btnPlay" RelativePanel.Below="userName" RelativePanel.AlignLeftWith="btnOptions" Command="{Binding cerrarAbrirSplit}" Margin="20">

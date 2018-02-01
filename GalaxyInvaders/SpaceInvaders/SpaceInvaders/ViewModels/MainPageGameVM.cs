@@ -175,5 +175,14 @@ namespace SpaceInvaders.ViewModels
             navigationFrame.Navigate(typeof(Game));
             
         }
+        public void btnscore(object sender, RoutedEventArgs e)
+        {
+            var rootFrame = new Frame();
+            rootFrame.Navigate(typeof(Scores));
+
+            Window.Current.Content = rootFrame;
+            Window.Current.Activate();
+
+        }
     }
 }

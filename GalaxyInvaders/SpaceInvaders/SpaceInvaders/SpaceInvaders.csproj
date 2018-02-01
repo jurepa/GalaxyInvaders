@@ -105,15 +105,21 @@
     <Compile Include="Models\Disparo.cs" />
     <Compile Include="Models\NaveAmiga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Score.xaml.cs">
+      <DependentUpon>Score.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\clsVMBase.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
     <Compile Include="ViewModels\MainPageGameVM.cs" />
+    <Compile Include="ViewModels\ScoresVM.cs" />
     <Compile Include="ViewModels\VMGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\Images\MisilEnemigoPro.png" />
+    <Content Include="Assets\Pixel_Emulator.ttf" />
     <None Include="SpaceInvaders_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +159,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Score.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="SpaceInvaders.Scores"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpaceInvaders"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:SpaceInvaders.ViewModels"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <vm:ScoresVM></vm:ScoresVM>
+    </Page.DataContext>
+    <Page.Resources>
+       <!-- Default style for Windows.UI.Xaml.Controls.Button -->
+        <Style TargetType="ListViewItem" x:Key="ListViewItemStyle">
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
+            <Setter Property="TabNavigation" Value="Local" />
+            <Setter Property="IsHoldingEnabled" Value="True" />
+            <Setter Property="Padding" Value="12,0,12,0" />
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="MinWidth" Value="{ThemeResource ListViewItemMinWidth}" />
+            <Setter Property="MinHeight" Value="{ThemeResource ListViewItemMinHeight}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <ListViewItemPresenter HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                           VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                           CheckBoxBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                                           CheckBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                                           CheckMode="Inline"
+                                           ContentMargin="{TemplateBinding Padding}"
+                                           ContentTransitions="{TemplateBinding ContentTransitions}"
+                                           DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}"
+                                           DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}"
+                                           DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}"
+                                           DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}"
+                                           FocusBorderBrush="{ThemeResource SystemControlForegroundAltHighBrush}"
+                                           FocusSecondaryBorderBrush="{ThemeResource SystemControlHighlightTransparentBrush}"
+                                           PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}"
+                                           PointerOverBackground="{ThemeResource SystemControlHighlightTransparentBrush}"
+                                           PointerOverForeground="{ThemeResource SystemControlBackgroundChromeWhiteBrush}"
+                                           PressedBackground="{ThemeResource SystemControlHighlightTransparentBrush}"
+                                           ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}"
+                                           SelectedBackground="{ThemeResource SystemControlHighlightTransparentBrush}"
+                                           SelectedForeground="{ThemeResource SystemControlBackgroundChromeBlackMediumBrush}"
+                                           SelectedPointerOverBackground="{ThemeResource SystemControlHighlightTransparentBrush}"
+                                           SelectedPressedBackground="{ThemeResource SystemControlHighlightTransparentBrush}"
+                                           SelectionCheckMarkVisualEnabled="True" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <RelativePanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+            <RelativePanel.Background>
+                <ImageBrush ImageSource="Assets\Images\Fondo Space Invaders.jpg" Stretch="Fill" ></ImageBrush>
+            </RelativePanel.Background>
+            <AppBarButton Click="{x:Bind VMGame.btnBackScore}"  Icon="Back" FontSize="140" Padding="40" Margin="30" Foreground="White" VerticalAlignment="Top"></AppBarButton>
+
+            <Image Margin="0 70 0 0" Name="logo" Source="Assets\Images\Logo Inicio Sapce Invaders.png" Width="500" RelativePanel.AlignHorizontalCenterWithPanel="True"></Image>
+
+            <TextBlock Name="title" FontFamily="Assets\Pixel_Emulator.ttf#Pixel Emulator" RelativePanel.Below="logo" Foreground="White"  Margin="30" Text="Top Scores" FontSize="30" HorizontalAlignment="Center" RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBlock>
+
+            <ProgressRing Name="progressBar" RelativePanel.AlignHorizontalCenterWithPanel="True" Foreground="White" Margin="0 90 0 0" IsActive="{Binding mHabiliteProgressring, Mode=TwoWay}" RelativePanel.Below="title"></ProgressRing>
+
+            <ListView RelativePanel.Below="title" ItemContainerStyle="{StaticResource ListViewItemStyle}" ItemsSource="{Binding prueba, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="40" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="White" Text="{Binding Nombre}"  FontSize="40" FontFamily="Assets\Pixel_Emulator.ttf#Pixel Emulator"  Margin=" 10 0" ></TextBlock>
+                            <TextBlock Foreground="White" Text="{Binding Puntuacion}" FontSize="40" FontFamily="Assets\Pixel_Emulator.ttf#Pixel Emulator" Margin=" 10 0"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </RelativePanel>
+    </Grid>
+</Page>

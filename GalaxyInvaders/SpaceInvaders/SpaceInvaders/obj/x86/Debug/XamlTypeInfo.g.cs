@@ -180,7 +180,7 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[16];
+            _typeNameTable = new string[23];
             _typeNameTable[0] = "SpaceInvaders.ViewModels.VMGame";
             _typeNameTable[1] = "SpaceInvaders.ViewModels.clsVMBase";
             _typeNameTable[2] = "Object";
@@ -197,8 +197,15 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
             _typeNameTable[13] = "String";
             _typeNameTable[14] = "Int32";
             _typeNameTable[15] = "SpaceInvaders.MainPage";
+            _typeNameTable[16] = "SpaceInvaders.ViewModels.ScoresVM";
+            _typeNameTable[17] = "System.Collections.ObjectModel.ObservableCollection`1<Entities.Jugador>";
+            _typeNameTable[18] = "System.Collections.ObjectModel.Collection`1<Entities.Jugador>";
+            _typeNameTable[19] = "Entities.Jugador";
+            _typeNameTable[20] = "System.DateTime";
+            _typeNameTable[21] = "System.ValueType";
+            _typeNameTable[22] = "SpaceInvaders.Scores";
 
-            _typeTable = new global::System.Type[16];
+            _typeTable = new global::System.Type[23];
             _typeTable[0] = typeof(global::SpaceInvaders.ViewModels.VMGame);
             _typeTable[1] = typeof(global::SpaceInvaders.ViewModels.clsVMBase);
             _typeTable[2] = typeof(global::System.Object);
@@ -215,6 +222,13 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
             _typeTable[13] = typeof(global::System.String);
             _typeTable[14] = typeof(global::System.Int32);
             _typeTable[15] = typeof(global::SpaceInvaders.MainPage);
+            _typeTable[16] = typeof(global::SpaceInvaders.ViewModels.ScoresVM);
+            _typeTable[17] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Entities.Jugador>);
+            _typeTable[18] = typeof(global::System.Collections.ObjectModel.Collection<global::Entities.Jugador>);
+            _typeTable[19] = typeof(global::Entities.Jugador);
+            _typeTable[20] = typeof(global::System.DateTime);
+            _typeTable[21] = typeof(global::System.ValueType);
+            _typeTable[22] = typeof(global::SpaceInvaders.Scores);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -255,6 +269,11 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
         private object Activate_11_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.String>(); }
         private object Activate_12_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.String>(); }
         private object Activate_15_MainPage() { return new global::SpaceInvaders.MainPage(); }
+        private object Activate_16_ScoresVM() { return new global::SpaceInvaders.ViewModels.ScoresVM(); }
+        private object Activate_17_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Entities.Jugador>(); }
+        private object Activate_18_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Entities.Jugador>(); }
+        private object Activate_19_Jugador() { return new global::Entities.Jugador(); }
+        private object Activate_22_Scores() { return new global::SpaceInvaders.Scores(); }
         private void VectorAdd_11_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
@@ -265,6 +284,18 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
             var newItem = (global::System.String)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_17_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Entities.Jugador>)instance;
+            var newItem = (global::Entities.Jugador)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_18_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Entities.Jugador>)instance;
+            var newItem = (global::Entities.Jugador)item;
             collection.Add(newItem);
         }
 
@@ -378,6 +409,58 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
+
+            case 16:   //  SpaceInvaders.ViewModels.ScoresVM
+                userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("SpaceInvaders.ViewModels.clsVMBase"));
+                userType.Activator = Activate_16_ScoresVM;
+                userType.AddMemberName("prueba");
+                userType.AddMemberName("mHabiliteProgressring");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  System.Collections.ObjectModel.ObservableCollection`1<Entities.Jugador>
+                userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Entities.Jugador>"));
+                userType.CollectionAdd = VectorAdd_17_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 18:   //  System.Collections.ObjectModel.Collection`1<Entities.Jugador>
+                userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_18_Collection;
+                userType.CollectionAdd = VectorAdd_18_Collection;
+                xamlType = userType;
+                break;
+
+            case 19:   //  Entities.Jugador
+                userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_19_Jugador;
+                userType.AddMemberName("ID");
+                userType.AddMemberName("Nombre");
+                userType.AddMemberName("Puntuacion");
+                userType.AddMemberName("FechaJuego");
+                xamlType = userType;
+                break;
+
+            case 20:   //  System.DateTime
+                userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 21:   //  System.ValueType
+                userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 22:   //  SpaceInvaders.Scores
+                userType = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_22_Scores;
+                userType.AddMemberName("VMGame");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
@@ -488,6 +571,76 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
             var that = (global::SpaceInvaders.ViewModels.MainPageGameVM)instance;
             that.mVolumeSlider = (global::System.Int32)Value;
         }
+        private object get_11_ScoresVM_prueba(object instance)
+        {
+            var that = (global::SpaceInvaders.ViewModels.ScoresVM)instance;
+            return that.prueba;
+        }
+        private void set_11_ScoresVM_prueba(object instance, object Value)
+        {
+            var that = (global::SpaceInvaders.ViewModels.ScoresVM)instance;
+            that.prueba = (global::System.Collections.ObjectModel.ObservableCollection<global::Entities.Jugador>)Value;
+        }
+        private object get_12_Jugador_ID(object instance)
+        {
+            var that = (global::Entities.Jugador)instance;
+            return that.ID;
+        }
+        private void set_12_Jugador_ID(object instance, object Value)
+        {
+            var that = (global::Entities.Jugador)instance;
+            that.ID = (global::System.Int32)Value;
+        }
+        private object get_13_Jugador_Nombre(object instance)
+        {
+            var that = (global::Entities.Jugador)instance;
+            return that.Nombre;
+        }
+        private void set_13_Jugador_Nombre(object instance, object Value)
+        {
+            var that = (global::Entities.Jugador)instance;
+            that.Nombre = (global::System.String)Value;
+        }
+        private object get_14_Jugador_Puntuacion(object instance)
+        {
+            var that = (global::Entities.Jugador)instance;
+            return that.Puntuacion;
+        }
+        private void set_14_Jugador_Puntuacion(object instance, object Value)
+        {
+            var that = (global::Entities.Jugador)instance;
+            that.Puntuacion = (global::System.Int32)Value;
+        }
+        private object get_15_Jugador_FechaJuego(object instance)
+        {
+            var that = (global::Entities.Jugador)instance;
+            return that.FechaJuego;
+        }
+        private void set_15_Jugador_FechaJuego(object instance, object Value)
+        {
+            var that = (global::Entities.Jugador)instance;
+            that.FechaJuego = (global::System.DateTime)Value;
+        }
+        private object get_16_ScoresVM_mHabiliteProgressring(object instance)
+        {
+            var that = (global::SpaceInvaders.ViewModels.ScoresVM)instance;
+            return that.mHabiliteProgressring;
+        }
+        private void set_16_ScoresVM_mHabiliteProgressring(object instance, object Value)
+        {
+            var that = (global::SpaceInvaders.ViewModels.ScoresVM)instance;
+            that.mHabiliteProgressring = (global::System.Boolean)Value;
+        }
+        private object get_17_Scores_VMGame(object instance)
+        {
+            var that = (global::SpaceInvaders.Scores)instance;
+            return that.VMGame;
+        }
+        private void set_17_Scores_VMGame(object instance, object Value)
+        {
+            var that = (global::SpaceInvaders.Scores)instance;
+            that.VMGame = (global::SpaceInvaders.ViewModels.ScoresVM)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -561,6 +714,48 @@ namespace SpaceInvaders.SpaceInvaders_XamlTypeInfo
                 xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "mVolumeSlider", "Int32");
                 xamlMember.Getter = get_10_MainPageGameVM_mVolumeSlider;
                 xamlMember.Setter = set_10_MainPageGameVM_mVolumeSlider;
+                break;
+            case "SpaceInvaders.ViewModels.ScoresVM.prueba":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.ScoresVM");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "prueba", "System.Collections.ObjectModel.ObservableCollection`1<Entities.Jugador>");
+                xamlMember.Getter = get_11_ScoresVM_prueba;
+                xamlMember.Setter = set_11_ScoresVM_prueba;
+                break;
+            case "Entities.Jugador.ID":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Entities.Jugador");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "ID", "Int32");
+                xamlMember.Getter = get_12_Jugador_ID;
+                xamlMember.Setter = set_12_Jugador_ID;
+                break;
+            case "Entities.Jugador.Nombre":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Entities.Jugador");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "Nombre", "String");
+                xamlMember.Getter = get_13_Jugador_Nombre;
+                xamlMember.Setter = set_13_Jugador_Nombre;
+                break;
+            case "Entities.Jugador.Puntuacion":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Entities.Jugador");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "Puntuacion", "Int32");
+                xamlMember.Getter = get_14_Jugador_Puntuacion;
+                xamlMember.Setter = set_14_Jugador_Puntuacion;
+                break;
+            case "Entities.Jugador.FechaJuego":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Entities.Jugador");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "FechaJuego", "System.DateTime");
+                xamlMember.Getter = get_15_Jugador_FechaJuego;
+                xamlMember.Setter = set_15_Jugador_FechaJuego;
+                break;
+            case "SpaceInvaders.ViewModels.ScoresVM.mHabiliteProgressring":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.ViewModels.ScoresVM");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "mHabiliteProgressring", "Boolean");
+                xamlMember.Getter = get_16_ScoresVM_mHabiliteProgressring;
+                xamlMember.Setter = set_16_ScoresVM_mHabiliteProgressring;
+                break;
+            case "SpaceInvaders.Scores.VMGame":
+                userType = (global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpaceInvaders.Scores");
+                xamlMember = new global::SpaceInvaders.SpaceInvaders_XamlTypeInfo.XamlMember(this, "VMGame", "SpaceInvaders.ViewModels.ScoresVM");
+                xamlMember.Getter = get_17_Scores_VMGame;
+                xamlMember.Setter = set_17_Scores_VMGame;
                 break;
             }
             return xamlMember;
