@@ -559,6 +559,9 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\play.png">
       <PackagePath>Assets\Images\play.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\PlayerPro.png">
+      <PackagePath>Assets\Images\PlayerPro.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\scores.png">
       <PackagePath>Assets\Images\scores.png</PackagePath>
     </AppxPackagedFile>

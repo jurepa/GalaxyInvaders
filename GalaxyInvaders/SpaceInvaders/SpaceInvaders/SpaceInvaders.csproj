@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Disparo.cs" />
+    <Compile Include="Models\NaveAmiga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\clsVMBase.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
@@ -126,6 +127,7 @@
     <Content Include="Assets\Images\MisilPro.png" />
     <Content Include="Assets\Images\options.png" />
     <Content Include="Assets\Images\play.png" />
+    <Content Include="Assets\Images\PlayerPro.png" />
     <Content Include="Assets\Images\scores.png" />
     <Content Include="Assets\Music\tetris.mp3" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
