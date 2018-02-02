@@ -29,6 +29,7 @@ namespace SpaceInvaders
     public sealed partial class Game : Page
     {
         public VMGame vMGame { get; }
+        public Image imagenEnemiga;
         //private bool haPulsado;
         //private bool haLevantado;
         //private DispatcherTimer timer = new DispatcherTimer();
@@ -42,6 +43,18 @@ namespace SpaceInvaders
             //Window.Current.Content.KeyDown += KeyDownEvent;
 
             vMGame =(VMGame) this.DataContext;
+            imagenEnemiga = new Image();
+            NaveEnemiga naveEnemiga = new NaveEnemiga();
+            naveEnemiga.imagen = new Uri("ms-appx:///Assets/Images/Alien3Pro.png");
+            naveEnemiga.dirX = 639;
+            naveEnemiga.dirY = 20;
+            imagenEnemiga.Source = new BitmapImage(naveEnemiga.imagen);
+            imagenEnemiga.Height = 50;
+            imagenEnemiga.Width = 50;
+            this.canvas.Children.Add(imagenEnemiga);
+            Canvas.SetTop(imagenEnemiga, naveEnemiga.dirY);
+            Canvas.SetLeft(imagenEnemiga,naveEnemiga.dirX);
+
             //vMGame.canvas = this.canvas;
             //timer.Interval = new TimeSpan(0,0,0,0,100);
             //timer.Tick += Timer_Tick;
@@ -106,13 +119,23 @@ namespace SpaceInvaders
         }
         private async void moveBullet(int velocidad, Image playerBullet)
         {
-            while (Canvas.GetTop(playerBullet) > 0)
+            while (this.canvas.Children.Contains(playerBullet))
             {
-
                 Canvas.SetTop(playerBullet, Canvas.GetTop(playerBullet) - velocidad);
+                if (this.canvas.Children.Contains(imagenEnemiga))
+                {
+                    if (Canvas.GetTop(imagenEnemiga) + 49 >= Canvas.GetTop(playerBullet) && Canvas.GetLeft(imagenEnemiga) <= Canvas.GetLeft(playerBullet) && Canvas.GetLeft(imagenEnemiga) + 50 > Canvas.GetLeft(playerBullet))
+                    {
+                        this.canvas.Children.Remove(imagenEnemiga);
+                        this.canvas.Children.Remove(playerBullet);
+                    }
+                }
+                if (Canvas.GetTop(playerBullet)<0)
+                {
+                    this.canvas.Children.Remove(playerBullet);
+                }
                 await Task.Delay(50);
             }
-            this.canvas.Children.Remove(playerBullet);
         }
         private void disparar()
         {
@@ -125,6 +148,11 @@ namespace SpaceInvaders
             Canvas.SetLeft(playerBullet, Canvas.GetLeft(this.player) + 35);
             this.canvas.Children.Add(playerBullet);
             moveBullet(disparo.velocidad, playerBullet);
+        }
+
+        private void comprobarImpacto()
+        {
+
         }
     }
 }
