@@ -119,6 +119,8 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\Images\Alien1.gif" />
+    <Content Include="Assets\Images\explosion.gif" />
     <Content Include="Assets\Images\MisilEnemigoPro.png" />
     <Content Include="Assets\Pixel_Emulator.ttf" />
     <None Include="SpaceInvaders_TemporaryKey.pfx" />

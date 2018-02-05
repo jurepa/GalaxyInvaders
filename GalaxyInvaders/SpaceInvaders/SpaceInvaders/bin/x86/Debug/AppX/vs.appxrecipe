@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-02T12:16:42.769</Modified>
+      <Modified>2018-02-05T13:18:11.105</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\bin\x86\Debug\SpaceInvaders.exe">
       <PackagePath>entrypoint\SpaceInvaders.exe</PackagePath>
-      <Modified>2018-02-02T12:16:40.741</Modified>
+      <Modified>2018-02-05T13:18:09.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\.nuget\packages\newtonsoft.json\10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -711,6 +711,14 @@
       <PackagePath>Capa-DAL.dll</PackagePath>
       <Modified>2018-01-29T12:00:56.428</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\Alien1.gif">
+      <PackagePath>Assets\Images\Alien1.gif</PackagePath>
+      <Modified>2018-02-05T12:51:09.872</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\explosion.gif">
+      <PackagePath>Assets\Images\explosion.gif</PackagePath>
+      <Modified>2018-02-05T12:57:09.164</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\Assets\Images\MisilEnemigoPro.png">
       <PackagePath>Assets\Images\MisilEnemigoPro.png</PackagePath>
       <Modified>2018-02-01T11:13:18.337</Modified>
@@ -840,11 +848,11 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-02T12:16:42.434</Modified>
+      <Modified>2018-02-05T13:18:10.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders\bin\x86\Debug\Core\SpaceInvaders.exe">
       <PackagePath>SpaceInvaders.exe</PackagePath>
-      <Modified>2018-02-02T12:16:42.763</Modified>
+      <Modified>2018-02-05T13:18:11.098</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

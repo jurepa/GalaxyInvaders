@@ -10,10 +10,11 @@ namespace SpaceInvaders.Models
     {
         /*DireccionX: Entero; DireccionY:Entero; Velocidad: Entero 
 		      PuedeDisparar:Boolean; Valor:Entero   */
-        public Disparo disparo { get; set; }
         public Uri imagen { get; set; }
         public Boolean visible { get; set; }
-        public Double dirX { get; set; }
+        public int dirX { get; set; }
+        public int posX { get; set; }
+        public int posY { get; set; }
         public Double dirY { get; set; }
         public int velocidad { get; set; }
         public Boolean puedeDisparar { get; set; }
