@@ -120,6 +120,8 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="Assets\Images\Alien1.gif" />
+    <Content Include="Assets\Images\Alien2.gif" />
+    <Content Include="Assets\Images\Alien3.gif" />
     <Content Include="Assets\Images\explosion.gif" />
     <Content Include="Assets\Images\MisilEnemigoPro.png" />
     <Content Include="Assets\Pixel_Emulator.ttf" />

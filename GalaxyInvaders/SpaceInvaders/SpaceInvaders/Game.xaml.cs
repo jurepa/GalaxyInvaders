@@ -110,21 +110,53 @@ namespace SpaceInvaders
                 {
                     if (this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i)))
                     {
-                        if (Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i))<=Canvas.GetTop(playerBullet)&&Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) + 30 >= Canvas.GetTop(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetLeft(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) + 38 >= Canvas.GetLeft(playerBullet))
+                        if (Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetTop(playerBullet) && Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) + 30 >= Canvas.GetTop(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetLeft(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) + 38 >= Canvas.GetLeft(playerBullet))
                         {
                             this.canvas.Children.Remove(playerBullet);
                             listaImagenesNavesEnemigas.ElementAt(i).Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/explosion.gif"));
                             await Task.Delay(500);
                             this.canvas.Children.Remove(listaImagenesNavesEnemigas.ElementAt(i));
+
+                            //Fila 1 no hace falta comprobar porque no tiene naves encima
+                            //Fila 2
+                            if (i >= 12 && i <= 23)
+                            {
+                                if (!this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i + 12))
+                                    && !this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i + 24))
+                                   && !this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i + 36)))
+                                {
+                                    listaEnemigos.ElementAt(i - 12).puedeDisparar = true;
+                                }
+                            }//Fila 3
+                            else if (i >= 24 && i <= 35)
+                            {
+                                if (!this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i + 12))
+                                    && !this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i + 24)))
+                                {
+                                    listaEnemigos.ElementAt(i - 12).puedeDisparar = true;
+                                }
+
+                            }//Fila 4
+                            else if (i >= 36 && i <= 47)
+                            {
+                                if (!this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i + 12)))
+                                {
+                                    listaEnemigos.ElementAt(i - 12).puedeDisparar = true;
+                                }
+                            }
+                            else if(i >= 48 && i <= 59) //Fila 5
+                            {
+                                listaEnemigos.ElementAt(i - 12).puedeDisparar = true;
+                            }
+                        
                         }
                     }
                 }
                 if (Canvas.GetTop(playerBullet) < 0)
-                {
-
-                    this.canvas.Children.Remove(playerBullet);
+                    {
+                        this.canvas.Children.Remove(playerBullet);
+                    }
                 }
-            }
 
         }
         private void disparar()
@@ -164,27 +196,27 @@ namespace SpaceInvaders
                 if (i >= 0 && i <= 11)
                 {
                     nave.posY = posY - 30;
-                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien1.gif");
+                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien2.gif");
                 }//Fila 2
                 else if (i >= 12 && i <= 23)
                 {
                     nave.posY = posY * 2 - 10;
-                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien2Pro.png");
+                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien1.gif");
                 }//Fila 3
                 else if (i >= 24 && i <= 35)
                 {
                     nave.posY = posY * 3 - 10;
-                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien2Pro.png");
+                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien1.gif");
                 }//Fila 4
                 else if (i >= 36 && i <= 47)
                 {
                     nave.posY = posY * 4 + 10;
-                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien3Pro.png");
+                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien3.gif");
                 }
                 else //Fila 5
                 {
                     nave.posY = posY * 5 + 30;
-                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien3Pro.png");
+                    nave.imagen = new Uri("ms-appx:///Assets/Images/Alien3.gif");
                 }
 
                 //Actualizamos valor de posX
