@@ -104,19 +104,18 @@ namespace SpaceInvaders
 
             while (this.canvas.Children.Contains(playerBullet))
             {
-
+                await Task.Delay(50);
                 Canvas.SetTop(playerBullet, Canvas.GetTop(playerBullet) - velocidad);
                 for (int i = 0; i < listaImagenesNavesEnemigas.Count; i++)
                 {
                     if (this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i)))
                     {
-                        if (Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) + 49 >= Canvas.GetTop(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetLeft(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) + 50 > Canvas.GetLeft(playerBullet))
+                        if (Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i))<=Canvas.GetTop(playerBullet)&&Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) + 30 >= Canvas.GetTop(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetLeft(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) + 38 >= Canvas.GetLeft(playerBullet))
                         {
                             this.canvas.Children.Remove(playerBullet);
                             listaImagenesNavesEnemigas.ElementAt(i).Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/explosion.gif"));
                             await Task.Delay(500);
                             this.canvas.Children.Remove(listaImagenesNavesEnemigas.ElementAt(i));
-
                         }
                     }
                 }
@@ -125,7 +124,6 @@ namespace SpaceInvaders
 
                     this.canvas.Children.Remove(playerBullet);
                 }
-                await Task.Delay(50);
             }
 
         }
@@ -209,7 +207,7 @@ namespace SpaceInvaders
             Image imagenNave = new Image();
             NaveEnemiga naveEnemiga = new NaveEnemiga();
             //var childs = this.canvas.Children;
-            int moveX = 5;
+            int moveX = 2;
             int direccion = 0;//1 derecha, 2 Izquierda
 
             for (int i = 0; i < listaImagenesNavesEnemigas.Count; i++)
