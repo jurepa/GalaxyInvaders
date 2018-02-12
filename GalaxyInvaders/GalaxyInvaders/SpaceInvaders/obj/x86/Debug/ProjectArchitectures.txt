@@ -1,0 +1,5 @@
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\Capa-BL\Capa-BL.csproj;x86
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\Capa-DAL\Capa-DAL.csproj;x86
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\Entities\Entities.csproj;x86
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\Entities\Entities.csproj;x86
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\SpaceInvaders.csproj;x86
