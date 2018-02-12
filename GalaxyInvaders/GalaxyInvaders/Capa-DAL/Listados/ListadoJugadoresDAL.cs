@@ -27,6 +27,7 @@ namespace Capa_DAL.Listados
                 string listadoJson = await httpClient.GetStringAsync(conexion.Server);
                 httpClient.Dispose();
                 listaJugadores = JsonConvert.DeserializeObject<List<Jugador>>(listadoJson);
+                listaJugadores = listaJugadores.OrderByDescending(o => o.Puntuacion).ToList();
 
             }
             catch (HttpRequestException e)

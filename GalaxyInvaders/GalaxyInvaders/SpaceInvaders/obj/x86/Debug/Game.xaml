@@ -18,6 +18,9 @@
             <Image x:ConnectionId='4' x:Name="vida1" Width="70" Height="70" Margin="20 20 0 0" Source="ms-appx:///Assets/Images/D.gif" Opacity="{Binding player.vida1, Mode=TwoWay}"  />
             <Image x:ConnectionId='5' x:Name="vida2" Width="70" Height="70" Margin="10 20 0 0" Source="ms-appx:///Assets/Images/A.gif" Opacity="{Binding player.vida2, Mode=TwoWay}" RelativePanel.RightOf="vida1" />
             <Image x:ConnectionId='6' x:Name="vida3" Width="70" Height="70" Margin="10 20 0 0" Source="ms-appx:///Assets/Images/M.gif" Opacity="{Binding player.vida3, Mode=TwoWay}" RelativePanel.RightOf="vida2" />
+            <TextBlock x:ConnectionId='7' Name="txtpuntuacion" Text="SCORE: " Margin="0 30 10 0" FontFamily="Assets\Pixel_Emulator.ttf#Pixel Emulator" Foreground="Green" RelativePanel.LeftOf="puntuacion" FontSize="60"/>
+            <TextBlock x:ConnectionId='8' Name="puntuacion" Text="{Binding puntuacion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 30 200 0" FontFamily="Assets\Pixel_Emulator.ttf#Pixel Emulator" Foreground="Green" RelativePanel.AlignRightWithPanel="True" FontSize="60"/>
+
         </RelativePanel>
         <Border BorderBrush="Green" BorderThickness="3" MaxHeight="600" MaxWidth="1350" Margin="10">
             <Canvas x:ConnectionId='2' x:Name="canvas" MaxHeight="600" MaxWidth="1350">

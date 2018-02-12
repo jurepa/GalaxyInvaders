@@ -19,5 +19,6 @@ namespace SpaceInvaders.Models
         public int velocidad { get; set; }
         public Boolean puedeDisparar { get; set; }
         public int valor { get; set; }
+        public Boolean puedeSerGolpeado { get; set; }
     }
 }

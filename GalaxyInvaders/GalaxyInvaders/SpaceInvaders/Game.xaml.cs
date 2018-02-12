@@ -18,6 +18,7 @@ using Windows.UI.Core;
 using SpaceInvaders.Models;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Threading.Tasks;
+using Entities;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,10 +33,12 @@ namespace SpaceInvaders
         public Image imagenEnemiga;
         public List<NaveEnemiga> listaEnemigos;
         public List<Image> listaImagenesNavesEnemigas;
+        public int cantidadNaves;
         //private bool haPulsado;
         //private bool haLevantado;
         public DispatcherTimer timer = new DispatcherTimer();
         public DispatcherTimer timerDisparoEnemigo = new DispatcherTimer();
+        public ContentDialog hasGanado = new ContentDialog();
         //private bool estaDisparando;
 
         public Game()
@@ -47,7 +50,7 @@ namespace SpaceInvaders
             this.InitializeComponent();
             cargaNaves();
             //Window.Current.Content.KeyDown += KeyDownEvent;
-
+            cantidadNaves = 60;
             vMGame = (VMGame)this.DataContext;
 
             //vMGame.canvas = this.canvas;
@@ -125,19 +128,51 @@ namespace SpaceInvaders
         {
             if (this.canvas.Children.Contains(listaImagenesNavesEnemigas.ElementAt(i)))
             {
-                if (Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetTop(playerBullet) && Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) + 30 >= Canvas.GetTop(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetLeft(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) + 38 >= Canvas.GetLeft(playerBullet))
+                if (this.listaEnemigos.ElementAt(i).puedeSerGolpeado)
                 {
-                    this.canvas.Children.Remove(playerBullet);
-                    listaImagenesNavesEnemigas.ElementAt(i).Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/explosion.gif"));
-                    await Task.Delay(500);
-                    this.canvas.Children.Remove(listaImagenesNavesEnemigas.ElementAt(i));
+                    if (Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetTop(playerBullet) && Canvas.GetTop(listaImagenesNavesEnemigas.ElementAt(i)) + 30 >= Canvas.GetTop(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) <= Canvas.GetLeft(playerBullet) && Canvas.GetLeft(listaImagenesNavesEnemigas.ElementAt(i)) + 38 >= Canvas.GetLeft(playerBullet))
+                    {
+                        cantidadNaves--;
+                        this.listaEnemigos.ElementAt(i).puedeSerGolpeado = false;
+                        this.vMGame.jugador.Puntuacion = this.vMGame.jugador.Puntuacion + listaEnemigos.ElementAt(i).valor;
+                        listaEnemigos.ElementAt(i).valor = 0;
+                        this.puntuacion.Text = Convert.ToString(this.vMGame.jugador.Puntuacion);
+                        this.canvas.Children.Remove(playerBullet);
+                        listaImagenesNavesEnemigas.ElementAt(i).Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/explosion.gif"));
+                        await Task.Delay(500);
+                        this.canvas.Children.Remove(listaImagenesNavesEnemigas.ElementAt(i));
 
-                    //Marcamos la nave enemiga como que no puede disparar
-                    listaEnemigos.ElementAt(i).puedeDisparar = false;
-
-                    siguienteNaveQuePuedeDisparar(i);
+                        //Marcamos la nave enemiga como que no puede disparar
+                        listaEnemigos.ElementAt(i).puedeDisparar = false;
+                        if (cantidadNaves == 0)
+                        {
+                            await mostrarGanador();
+                        }
+                        siguienteNaveQuePuedeDisparar(i);
+                    }
                 }
             }
+        }
+        private async Task mostrarGanador()
+        {
+            //ContentDialog hasGanado = new ContentDialog();
+            hasGanado.Title = "Victoria!!";
+            hasGanado.Content = "Enhorabuena, has hecho " + this.vMGame.jugador.Puntuacion+" puntos";
+            hasGanado.PrimaryButtonText = "Submit Score";
+            //hasGanado.PrimaryButtonClick += HasGanado_PrimaryButtonClick;
+            ContentDialogResult resultado= await hasGanado.ShowAsync();
+            if(resultado==ContentDialogResult.Primary)
+            {
+                this.vMGame.submitScore();
+                this.Frame.Navigate(typeof(MainPage));
+            }
+        }
+
+        private void HasGanado_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            this.vMGame.submitScore();
+            this.Frame.Navigate(typeof(MainPage));
+
         }
 
         public void siguienteNaveQuePuedeDisparar(int indiceNave)
@@ -277,8 +312,8 @@ namespace SpaceInvaders
                         this.player.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/explosion.gif"));
                         //await Task.Delay(500);
                         
-                        vMGame.player.vidas--;
-                        cambiaVisibilidad();
+                        //vMGame.player.vidas--;
+                        //cambiaVisibilidad();
 
                         await Task.Delay(800);
 
@@ -321,7 +356,7 @@ namespace SpaceInvaders
             }
         }
 
-
+        
         private void cargaNaves()
         {
             NaveEnemiga nave = null;
@@ -332,6 +367,7 @@ namespace SpaceInvaders
             for (int i = 0; i < 60; i++)
             {
                 nave = new NaveEnemiga();
+                nave.puedeSerGolpeado = true;
                 imagenNave = new Image();
                 if (i == 0 || i == 12 || i == 24 || i == 36 || i == 48)
                 {
@@ -444,8 +480,13 @@ namespace SpaceInvaders
             Canvas.SetTop(imagenNave, naveEnemiga.posY);
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
 
-
+            var parameters = (Jugador)e.Parameter;
+            this.vMGame.jugador=parameters;
+        }
 
 
 

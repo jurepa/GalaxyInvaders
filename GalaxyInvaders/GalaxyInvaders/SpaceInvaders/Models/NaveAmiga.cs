@@ -16,9 +16,11 @@ namespace SpaceInvaders.Models
         public Double vida3 { get; set; }
         public int velocidad { get; set; }
         public int posicionX{ get;set; }
+        public int puntuacion { get; set; }
 
         public NaveAmiga( Uri imagen, Double visible, Double vida1, Double vida2, Double vida3 , int velocidad, int posicionX)
         {
+            this.puntuacion = 0;
             this.vidas = 3;
             this.vida1 = vida1;
             this.vida2= vida2;

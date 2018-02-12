@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -18,20 +19,30 @@ namespace SpaceInvaders.ViewModels
         private DelegateCommand _backCerrarSplit;
         private DelegateCommand _mostrarInstrucciones;
         private int _mIndexDificultadSeleccionada;
+        private string _username1;
+        private string _username2;
+        private string _username3;
         private double _mVolumeMedia;
         private int _mVolumeSlider;
         private bool _splitAbierto;
+        private Jugador jugador;
 
         #endregion
         #region contructor
         public MainPageGameVM()
         {
+            _username1 = "";
+            _username2 = "";
+            _username3 = "";
             getLevels();
             _splitAbierto = false;
             _mVolumeMedia = 1;
             _mVolumeSlider = 100;
             NotifyPropertyChanged("mVolumeMedia");
             NotifyPropertyChanged("mVolumeSlider");
+            NotifyPropertyChanged("username1");
+            NotifyPropertyChanged("username2");
+            NotifyPropertyChanged("username3");
         }
 
 
@@ -39,6 +50,45 @@ namespace SpaceInvaders.ViewModels
 
         #region Propiedades Publicas
 
+        public string userName1
+        {
+
+            set
+            {
+                _username1 = value;
+                NotifyPropertyChanged("username1");
+            }
+            get
+            {
+                return _username1;
+            }
+        }
+        public string userName2
+        {
+
+            set
+            {
+                _username2 = value;
+                NotifyPropertyChanged("username1");
+            }
+            get
+            {
+                return _username2;
+            }
+        }
+        public string userName3
+        {
+
+            set
+            {
+                _username3 = value;
+                NotifyPropertyChanged("username1");
+            }
+            get
+            {
+                return _username3;
+            }
+        }
         public DelegateCommand mostrarInstrucciones
         {
             set
@@ -144,7 +194,7 @@ namespace SpaceInvaders.ViewModels
             _mDificultades.Add("Normal");
             _mDificultades.Add("Dificil");
             _mIndexDificultadSeleccionada = 1;
-
+            jugador = new Jugador();
             NotifyPropertyChanged("mIndexDificultadSeleccionada");
             NotifyPropertyChanged("mDificultades");
         }
@@ -170,9 +220,16 @@ namespace SpaceInvaders.ViewModels
         }
         public void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            Frame navigationFrame = Window.Current.Content as Frame;
 
-            navigationFrame.Navigate(typeof(Game));
+            Frame navigationFrame = Window.Current.Content as Frame;
+            if(userName1==""||userName2==""||userName3=="")
+            {
+                userName1 = "U";
+                userName2 = "S";
+                userName3 = "R";
+            }
+            jugador.Nombre = userName1 + userName2 + userName3;
+            navigationFrame.Navigate(typeof(Game),jugador);
             
         }
         public void btnscore(object sender, RoutedEventArgs e)

@@ -1,4 +1,6 @@
-﻿using SpaceInvaders.Models;
+﻿using Capa_BL.Gestoras;
+using Entities;
+using SpaceInvaders.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,8 @@ namespace SpaceInvaders.ViewModels
         #region privados
         private NaveAmiga _player;
         private Double _posYMisil;
+        private Jugador _jugador;
+        private string _puntuacion;
         private DispatcherTimer dispatcherTimer { get; set; }
         //private Canvas _canvas;
         #endregion
@@ -31,6 +35,30 @@ namespace SpaceInvaders.ViewModels
                 _canvas = value;
             }
         }*/
+        public string puntuacion
+        {
+            get
+            {
+                return _puntuacion;
+            }
+            set
+            {
+                _puntuacion = value;
+                NotifyPropertyChanged("puntuacion");
+            }
+        }
+        public Jugador jugador
+        {
+            get
+            {
+                return _jugador;
+            }
+            set
+            {
+                _jugador = value;
+                NotifyPropertyChanged("jugador");
+            }
+        }
         public Double posYMisil
         {
             get
@@ -127,6 +155,12 @@ namespace SpaceInvaders.ViewModels
             {
                 _player.velocidad = 0;
             }
+        }
+
+        public async void submitScore()
+        {
+            GestoraJugadoresBL gestoraBL = new GestoraJugadoresBL();
+            await gestoraBL.insertJugador(this.jugador);
         }
 
     }

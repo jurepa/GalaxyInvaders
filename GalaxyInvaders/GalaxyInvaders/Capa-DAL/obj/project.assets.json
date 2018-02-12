@@ -10677,7 +10677,7 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "svqEclOg2g3pmsVen1/sCCsozefwISlHQcB/Y5yxqovG6tx+LIxN0XtGH4XSieLbf5PbzVIXmHoPPrWb0QhuaA==",
+      "sha512": "2RI4q8FfR0S50V4YdZIZtzfyA2Bo4+jJHQXG+TDN7D4mPrFiIswIq8HVeDWS9xZsDwz23z7d/T2qi4rZa60Sig==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
@@ -14945,20 +14945,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\icastillo\\.nuget\\packages\\": {}
+    "C:\\Users\\pjarana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\icastillo\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\Capa-DAL\\Capa-DAL.csproj",
+      "projectUniqueName": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\GalaxyInvaders\\Capa-DAL\\Capa-DAL.csproj",
       "projectName": "Capa-DAL",
-      "projectPath": "C:\\Users\\icastillo\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\Capa-DAL\\Capa-DAL.csproj",
-      "packagesPath": "C:\\Users\\icastillo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\icastillo\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\Capa-DAL\\obj\\",
+      "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\GalaxyInvaders\\Capa-DAL\\Capa-DAL.csproj",
+      "packagesPath": "C:\\Users\\pjarana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\GalaxyInvaders\\Capa-DAL\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\icastillo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pjarana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -14971,8 +14971,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\icastillo\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\icastillo\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\Entities\\Entities.csproj"
+            "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\GalaxyInvaders\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\pjarana\\Desktop\\GitHub\\GalaxyInvaders\\GalaxyInvaders\\GalaxyInvaders\\Entities\\Entities.csproj"
             }
           }
         }
