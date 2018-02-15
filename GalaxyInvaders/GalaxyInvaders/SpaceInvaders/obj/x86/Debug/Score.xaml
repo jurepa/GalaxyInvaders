@@ -85,9 +85,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-
             </ListView>
-
         </RelativePanel>
     </Grid>
 </Page>

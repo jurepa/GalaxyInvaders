@@ -38,7 +38,7 @@ namespace SpaceInvaders
         //private bool haLevantado;
         public DispatcherTimer timer = new DispatcherTimer();
         public DispatcherTimer timerDisparoEnemigo = new DispatcherTimer();
-        public ContentDialog hasGanado = new ContentDialog();
+
         //private bool estaDisparando;
 
         public Game()
@@ -146,34 +146,37 @@ namespace SpaceInvaders
                         listaEnemigos.ElementAt(i).puedeDisparar = false;
                         if (cantidadNaves == 0)
                         {
-                            await mostrarGanador();
+                            Window.Current.Content.KeyUp -= this.vMGame.Grid_KeyUp;
+                            Window.Current.Content.KeyUp -= Disparo_KeyUp;
+                            mostrarGanador();
                         }
                         siguienteNaveQuePuedeDisparar(i);
                     }
                 }
             }
         }
-        private async Task mostrarGanador()
+        private async void mostrarGanador()
         {
+            ContentDialog hasGanado = new ContentDialog();
             //ContentDialog hasGanado = new ContentDialog();
             hasGanado.Title = "Victoria!!";
             hasGanado.Content = "Enhorabuena, has hecho " + this.vMGame.jugador.Puntuacion+" puntos";
             hasGanado.PrimaryButtonText = "Submit Score";
             //hasGanado.PrimaryButtonClick += HasGanado_PrimaryButtonClick;
             ContentDialogResult resultado= await hasGanado.ShowAsync();
-            if(resultado==ContentDialogResult.Primary)
-            {
-                this.vMGame.submitScore();
-                this.Frame.Navigate(typeof(MainPage));
-            }
+            //if(resultado==ContentDialogResult.Primary)
+            //{
+            //    //this.vMGame.submitScore();
+            //    this.Frame.Navigate(typeof(MainPage));
+            //}
         }
 
-        private void HasGanado_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
-            this.vMGame.submitScore();
-            this.Frame.Navigate(typeof(MainPage));
+        //private void HasGanado_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        //{
+        //    this.vMGame.submitScore();
+        //    this.Frame.Navigate(typeof(MainPage));
 
-        }
+        //}
 
         public void siguienteNaveQuePuedeDisparar(int indiceNave)
         {
