@@ -20,7 +20,8 @@ namespace SpaceInvaders.ViewModels
         private Double _posYMisil;
         private Jugador _jugador;
         private string _puntuacion;
-        private DispatcherTimer dispatcherTimer { get; set; }
+        private double _opacidadPausa;
+        public DispatcherTimer dispatcherTimer { get; set; }
         //private Canvas _canvas;
         #endregion
         #region publicos
@@ -35,6 +36,18 @@ namespace SpaceInvaders.ViewModels
                 _canvas = value;
             }
         }*/
+        public double opacidadPausa
+        {
+            get
+            {
+                return _opacidadPausa;
+            }
+            set
+            {
+                _opacidadPausa = value;
+                NotifyPropertyChanged("opacidadPausa");
+            }
+        }
         public string puntuacion
         {
             get
@@ -89,12 +102,13 @@ namespace SpaceInvaders.ViewModels
         {
             _player = new NaveAmiga(new Uri("ms-appx:///Assets/Images/PlayerPro.png"),1, 1, 1, 1, 50,639);
             _posYMisil = 540;
+            _opacidadPausa = 0;
             NotifyPropertyChanged("player");
             NotifyPropertyChanged("posYMisil");
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             dispatcherTimer.Tick += timerTick;
-
+            NotifyPropertyChanged("opacidadPausa");
         }
         private void timerTick(object sender, object e)
         {

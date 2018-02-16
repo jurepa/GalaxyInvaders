@@ -95,13 +95,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContentDialogSubmitScore.xaml.cs">
+      <DependentUpon>ContentDialogSubmitScore.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Disparo.cs" />
     <Compile Include="Models\NaveAmiga.cs" />
     <Compile Include="Models\NaveEnemiga.cs" />
@@ -125,8 +127,12 @@
     <Content Include="Assets\Images\Alien3.gif" />
     <Content Include="Assets\Images\D.gif" />
     <Content Include="Assets\Images\explosion.gif" />
+    <Content Include="Assets\Images\ExplosionMisil.gif" />
     <Content Include="Assets\Images\M.gif" />
     <Content Include="Assets\Images\MisilEnemigoPro.png" />
+    <Content Include="Assets\Images\Pausa.png" />
+    <Content Include="Assets\Music\disparo.wav" />
+    <Content Include="Assets\Music\explosion.mp3" />
     <Content Include="Assets\Pixel_Emulator.ttf" />
     <None Include="SpaceInvaders_TemporaryKey.pfx" />
   </ItemGroup>
@@ -162,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ContentDialogSubmitScore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Game.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

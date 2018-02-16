@@ -1523,3 +1523,13 @@ C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\Spa
 C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\resources.en-us.resfiles
 C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\ContentDialogSubmitScore.xbf
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.g.i.cs
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.g.cs
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.xaml
+C:\Users\icastillo\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.xbf
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.g.i.cs
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.g.cs
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.xaml
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\obj\x86\Debug\ContentDialogSubmitScore.xbf
+C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\ContentDialogSubmitScore.xbf

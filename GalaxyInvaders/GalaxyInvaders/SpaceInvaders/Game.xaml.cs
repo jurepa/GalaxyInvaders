@@ -19,6 +19,8 @@ using SpaceInvaders.Models;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Threading.Tasks;
 using Entities;
+using Windows.Media.Playback;
+using Windows.Media.Core;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -38,7 +40,12 @@ namespace SpaceInvaders
         //private bool haLevantado;
         public DispatcherTimer timer = new DispatcherTimer();
         public DispatcherTimer timerDisparoEnemigo = new DispatcherTimer();
-
+        public ContentDialog hasGanadoContentDialog = new ContentDialog();
+        public Boolean noDispares = false;
+        public Boolean haGanado = false;
+        public Boolean haPulsadoEspacio = false;
+        public Boolean pausa = false;
+        private MediaPlayer mediaPlayer;
         //private bool estaDisparando;
 
         public Game()
@@ -49,6 +56,7 @@ namespace SpaceInvaders
             //haLevantado = false;
             this.InitializeComponent();
             cargaNaves();
+            mediaPlayer = new MediaPlayer();
             //Window.Current.Content.KeyDown += KeyDownEvent;
             cantidadNaves = 60;
             vMGame = (VMGame)this.DataContext;
@@ -81,9 +89,9 @@ namespace SpaceInvaders
         private void allowfocus_Loaded(object sender, RoutedEventArgs e)
         {
             Window.Current.Content.KeyDown += this.vMGame.Grid_KeyDown;
-            //Window.Current.Content.KeyDown += Disparo_KeyDown;
-            Window.Current.Content.KeyUp += this.vMGame.Grid_KeyUp;
-            Window.Current.Content.KeyUp += Disparo_KeyUp;
+            Window.Current.Content.KeyDown += Disparo_KeyDown;
+            Window.Current.Content.KeyUp += this.vMGame.Grid_KeyUp;//Para el movimiento de nuestra nave
+            Window.Current.Content.KeyUp += Disparo_KeyUp;//Para el disparo de nuestra nave
             //Window.Current.Content.KeyUp += Disparo_KeyUp;
         }
 
@@ -91,10 +99,11 @@ namespace SpaceInvaders
 
         private void Disparo_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            if (e.Key == VirtualKey.Space)
+            if (e.Key == VirtualKey.Space && !noDispares)
             {
                 //haLevantado = true;
                 disparar();
+                reproducirAudioAsync("disparo.wav");
             }
         }
 
@@ -102,14 +111,32 @@ namespace SpaceInvaders
         {
             if (e.Key == VirtualKey.Space)
             {
-                //haPulsado = true;
-                disparar();
-                //estaDisparando = true;
+                haPulsadoEspacio = true;
             }
+            if(e.Key==VirtualKey.Escape &&!pausa) //CUANDO REANUDAS EL JUEGO LOS MISILES QUE HABIAN Y SE HAN PARADO NO SE MUEVEN
+            {
+                noDispares = true;
+                pausa = true;
+                timer.Stop();
+                timerDisparoEnemigo.Stop();
+                Window.Current.Content.KeyDown -= this.vMGame.Grid_KeyDown;
+                this.vMGame.opacidadPausa = 1;
+            }
+            else if(e.Key==VirtualKey.Escape&&pausa)
+            {
+                noDispares = false;
+                pausa = false;
+                timer.Start();
+                timerDisparoEnemigo.Start();
+                Window.Current.Content.KeyDown += this.vMGame.Grid_KeyDown;
+                this.vMGame.opacidadPausa = 0;
+            }
+
         }
+
         private async void moveBullet(int velocidad, Image playerBullet)
         {
-            while (this.canvas.Children.Contains(playerBullet))
+            while (this.canvas.Children.Contains(playerBullet)&&!pausa)
             {
                 await Task.Delay(50);
                 Canvas.SetTop(playerBullet, Canvas.GetTop(playerBullet) - velocidad);
@@ -119,6 +146,7 @@ namespace SpaceInvaders
                 }
                 if (Canvas.GetTop(playerBullet) < 0)
                 {
+                    reproducirAudioAsync("explosion.mp3");
                     this.canvas.Children.Remove(playerBullet);
                 }
             }
@@ -144,11 +172,17 @@ namespace SpaceInvaders
 
                         //Marcamos la nave enemiga como que no puede disparar
                         listaEnemigos.ElementAt(i).puedeDisparar = false;
-                        if (cantidadNaves == 0)
+                        if (cantidadNaves == 0 && !haGanado)
                         {
-                            Window.Current.Content.KeyUp -= this.vMGame.Grid_KeyUp;
-                            Window.Current.Content.KeyUp -= Disparo_KeyUp;
+
+
+                            //Paramos los timer
+                            timer.Stop();
+                            timerDisparoEnemigo.Stop();
+                            noDispares = true;
+                            haGanado = true;
                             mostrarGanador();
+
                         }
                         siguienteNaveQuePuedeDisparar(i);
                     }
@@ -157,26 +191,32 @@ namespace SpaceInvaders
         }
         private async void mostrarGanador()
         {
-            ContentDialog hasGanado = new ContentDialog();
             //ContentDialog hasGanado = new ContentDialog();
-            hasGanado.Title = "Victoria!!";
-            hasGanado.Content = "Enhorabuena, has hecho " + this.vMGame.jugador.Puntuacion+" puntos";
-            hasGanado.PrimaryButtonText = "Submit Score";
-            //hasGanado.PrimaryButtonClick += HasGanado_PrimaryButtonClick;
-            ContentDialogResult resultado= await hasGanado.ShowAsync();
-            //if(resultado==ContentDialogResult.Primary)
-            //{
-            //    //this.vMGame.submitScore();
-            //    this.Frame.Navigate(typeof(MainPage));
-            //}
+            hasGanadoContentDialog.Title = "Victoria!!";
+            hasGanadoContentDialog.Content = "Enhorabuena, has hecho " + this.vMGame.jugador.Puntuacion+" puntos";
+            hasGanadoContentDialog.PrimaryButtonText = "Submit Score";
+            //hasGanadoContentDialog.IsFocusEngaged=false;
+            //hasGanadoContentDialog.AllowFocusOnInteraction = false;
+            //var buttonSpace = (Button) Window.Current.CoreWindow.GetKeyState(VirtualKey.Space);
+
+           
+
+            ContentDialogResult resultado= await hasGanadoContentDialog.ShowAsync();
+            //hasGanadoContentDialog.Focus(FocusState.Unfocused);
+            //hasGanadoContentDialog.IsTapEnabled = false;
+
+            //hasGanadoContentDialog.IsFocusEngagementEnabled = false;
+            //hasGanadoContentDialog.AllowFocusOnInteraction = false;
+            /*var buttonSpace = (Button)FocusManager.GetFocusedElement();
+            buttonSpace.IsFocusEngagementEnabled = false;*/
+            
+            if (resultado == ContentDialogResult.Primary /*&& !haPulsadoEspacio*/)
+            {
+                this.vMGame.submitScore();
+                this.Frame.Navigate(typeof(MainPage));
+            }
         }
 
-        //private void HasGanado_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        //{
-        //    this.vMGame.submitScore();
-        //    this.Frame.Navigate(typeof(MainPage));
-
-        //}
 
         public void siguienteNaveQuePuedeDisparar(int indiceNave)
         {
@@ -284,21 +324,11 @@ namespace SpaceInvaders
             Canvas.SetLeft(playerBullet, disparo.dirX);
             this.canvas.Children.Add(playerBullet);
             moveBulletEnemigo(disparo.velocidad, playerBullet);
-
-            /*Disparo disparo = new Disparo(vMGame.posYMisil, vMGame.player.posicionX, 20, 10, new Uri("ms-appx:///Assets/Images/MisilEnemigoPro.png"));
-            Image playerBullet = new Image();
-            playerBullet.Source = new BitmapImage(disparo.imagen);
-            playerBullet.Height = 20;
-            playerBullet.Width = 10;
-            Canvas.SetTop(playerBullet, Canvas.GetTop(this.player));
-            Canvas.SetLeft(playerBullet, Canvas.GetLeft(this.player) + 35);
-            this.canvas.Children.Add(playerBullet);
-            moveBullet(disparo.velocidad, playerBullet);*/
         }
 
         private async void moveBulletEnemigo(int velocidad, Image enemyBullet)
         {
-            while (this.canvas.Children.Contains(enemyBullet))
+            while (this.canvas.Children.Contains(enemyBullet)&&!pausa)
             {
                 await Task.Delay(50);
                 Canvas.SetTop(enemyBullet, Canvas.GetTop(enemyBullet) + velocidad);
@@ -311,29 +341,37 @@ namespace SpaceInvaders
                         Canvas.GetLeft(this.player) <= Canvas.GetLeft(enemyBullet)+10 && 
                         Canvas.GetLeft(this.player) + 70 >= Canvas.GetLeft(enemyBullet))
                     {
+                        reproducirAudioAsync("explosion.mp3");
                         this.canvas.Children.Remove(enemyBullet);
                         this.player.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/explosion.gif"));
                         //await Task.Delay(500);
                         
-                        //vMGame.player.vidas--;
-                        //cambiaVisibilidad();
+                        vMGame.player.vidas--;
+                        cambiaVisibilidad();
 
                         await Task.Delay(800);
 
                         if (vMGame.player.vidas==0)
                         {
-                            //
                             this.player.Opacity = 0;                           
                             timer.Stop();
                             timerDisparoEnemigo.Stop();
 
-                            //Mostrar mensaje 
+                            //Mostrar mensaje para reiniciar partida
 
                         }
                         else
                         {                           
                             this.player.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/PlayerPro.png"));
                         }                       
+                    }else if (Canvas.GetTop(enemyBullet)+20>=600)//Eliminar Disparo del canvas
+                    {//SETA ATOMICA
+                        enemyBullet.Source= new BitmapImage(new Uri("ms-appx:///Assets/Images/ExplosionMisil.gif"));
+                        enemyBullet.Width = 50;
+                        enemyBullet.Height = 50;
+                        enemyBullet.Margin = new Thickness(0,0,100,100);
+                        await Task.Delay(500);
+                        this.canvas.Children.Remove(enemyBullet);
                     }
                 }
             }
@@ -354,7 +392,6 @@ namespace SpaceInvaders
 
                 case 0:
                     vMGame.player.vida1 = 0;
-
                 break;
             }
         }
@@ -490,7 +527,37 @@ namespace SpaceInvaders
             var parameters = (Jugador)e.Parameter;
             this.vMGame.jugador=parameters;
         }
+        /**
+         *Reproduce audio de la carpeta music 
+         * 
+         */
+        private async Task PlayMusicImpact(String nombreAudio) //se bloquea la ui cuando hay muchos disparos!!!!!!!!!!!!!!!!!!!!!!
+        {
+            /* mediaPlayer = new MediaPlayerElement();
+             mediaPlayer.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Music/" + nombreAudio));
+             mediaPlayer.AutoPlay = true;*/
+            if (mediaPlayer.PlaybackSession.PlaybackState == MediaPlaybackState.Playing)
+            {
+                mediaPlayer.Dispose();
+                Uri manifestUri = new Uri("ms-appx:///Assets/Music/" + nombreAudio);
+                mediaPlayer = new MediaPlayer();
+                mediaPlayer.Source = MediaSource.CreateFromUri(manifestUri);
+                mediaPlayer.Play();
+            }
+            else
+            {
+                Uri manifestUri = new Uri("ms-appx:///Assets/Music/" + nombreAudio);
 
+                mediaPlayer.Source = MediaSource.CreateFromUri(manifestUri);
+                mediaPlayer.Play();
+            }
+
+        }
+
+        private async void reproducirAudioAsync(String nombreAudio)
+        {
+            await PlayMusicImpact(nombreAudio);
+        }
 
 
 
