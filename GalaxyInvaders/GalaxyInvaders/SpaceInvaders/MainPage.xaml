@@ -39,7 +39,7 @@
 
                         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="20">
                             <TextBlock Text="Dificultad" FontSize="30" TextAlignment="Center" Margin="0 0 0 20" ></TextBlock>
-                            <ComboBox Name="comboBox" HorizontalAlignment="Center" SelectedValuePath="ComboBoxOption" ItemsSource="{Binding mDificultades, Mode=TwoWay}" SelectedItem="{Binding mDificultadSeleccionada, Mode=OneWay}" SelectedIndex="{Binding mIndexDificultadSeleccionada}"  >
+                            <ComboBox Name="comboBox" HorizontalAlignment="Center" SelectedValuePath="ComboBoxOption" ItemsSource="{Binding mDificultades, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding mDificultadSeleccionada, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedIndex="{Binding mIndexDificultadSeleccionada}"  >
                             </ComboBox>
 
                         </StackPanel>

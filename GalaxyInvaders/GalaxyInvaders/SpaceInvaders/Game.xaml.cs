@@ -36,6 +36,7 @@ namespace SpaceInvaders
         public List<NaveEnemiga> listaEnemigos;
         public List<Image> listaImagenesNavesEnemigas;
         public int cantidadNaves;
+        private int dificultad;
         //private bool haPulsado;
         //private bool haLevantado;
         public DispatcherTimer timer = new DispatcherTimer();
@@ -45,7 +46,7 @@ namespace SpaceInvaders
         public Boolean haGanado = false;
         public Boolean haPulsadoEspacio = false;
         public Boolean pausa = false;
-        private MediaPlayer mediaPlayer;
+        private MediaElement mediaPlayer;
         //private bool estaDisparando;
 
         public Game()
@@ -55,8 +56,9 @@ namespace SpaceInvaders
             //haPulsado = false;
             //haLevantado = false;
             this.InitializeComponent();
-            cargaNaves();
-            mediaPlayer = new MediaPlayer();
+
+            mediaPlayer = new MediaElement();
+            this.grid.Children.Add(mediaPlayer);
             //Window.Current.Content.KeyDown += KeyDownEvent;
             cantidadNaves = 60;
             vMGame = (VMGame)this.DataContext;
@@ -66,9 +68,7 @@ namespace SpaceInvaders
             timer.Tick += Timer_Tick;
             timer.Start();
 
-            timerDisparoEnemigo.Interval = new TimeSpan(0, 0, 0, 2, 0);
-            timerDisparoEnemigo.Tick += tickDisparoEnemigo;
-            timerDisparoEnemigo.Start();
+            
         }
 
         private void tickDisparoEnemigo(object sender, object e)
@@ -169,7 +169,7 @@ namespace SpaceInvaders
                         listaImagenesNavesEnemigas.ElementAt(i).Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/explosion.gif"));
                         await Task.Delay(500);
                         this.canvas.Children.Remove(listaImagenesNavesEnemigas.ElementAt(i));
-
+                        reproducirAudioAsync("explosion.mp3");
                         //Marcamos la nave enemiga como que no puede disparar
                         listaEnemigos.ElementAt(i).puedeDisparar = false;
                         if (cantidadNaves == 0 && !haGanado)
@@ -331,7 +331,7 @@ namespace SpaceInvaders
             while (this.canvas.Children.Contains(enemyBullet)&&!pausa)
             {
                 await Task.Delay(50);
-                Canvas.SetTop(enemyBullet, Canvas.GetTop(enemyBullet) + velocidad);
+                Canvas.SetTop(enemyBullet, (Canvas.GetTop(enemyBullet) + velocidad));
 
                 //Detectar colision con nuestra nave
                 if (this.canvas.Children.Contains(this.player))
@@ -423,31 +423,31 @@ namespace SpaceInvaders
                 {
                     nave.posY = posY - 30;
                     nave.imagen = new Uri("ms-appx:///Assets/Images/Alien2.gif");
-                    nave.valor = 40;
+                    nave.valor = 40*dificultad;
                 }//Fila 2
                 else if (i >= 12 && i <= 23)
                 {
                     nave.posY = posY * 2 - 10;
                     nave.imagen = new Uri("ms-appx:///Assets/Images/Alien1.gif");
-                    nave.valor = 30;
+                    nave.valor = 30*dificultad;
                 }//Fila 3
                 else if (i >= 24 && i <= 35)
                 {
                     nave.posY = posY * 3 - 10;
                     nave.imagen = new Uri("ms-appx:///Assets/Images/Alien1.gif");
-                    nave.valor = 30;
+                    nave.valor = 30*dificultad;
                 }//Fila 4
                 else if (i >= 36 && i <= 47)
                 {
                     nave.posY = posY * 4 + 10;
                     nave.imagen = new Uri("ms-appx:///Assets/Images/Alien3.gif");
-                    nave.valor = 20;
+                    nave.valor = 20*dificultad;
                 }
                 else //Fila 5
                 {
                     nave.posY = posY * 5 + 30;
                     nave.imagen = new Uri("ms-appx:///Assets/Images/Alien3.gif");
-                    nave.valor = 20;
+                    nave.valor = 20*dificultad;
                     nave.puedeDisparar = true;
                 }
 
@@ -524,8 +524,31 @@ namespace SpaceInvaders
         {
             base.OnNavigatedTo(e);
 
-            var parameters = (Jugador)e.Parameter;
-            this.vMGame.jugador=parameters;
+            var parameters = (JugadorConDificultad)e.Parameter;
+            this.vMGame.jugador=new Jugador();
+            this.vMGame.jugador.ID = parameters.ID;
+            this.vMGame.jugador.Nombre = parameters.Nombre;
+            this.vMGame.jugador.Puntuacion = parameters.Puntuacion;
+            this.vMGame.jugador.FechaJuego = parameters.FechaJuego;
+            switch (parameters.dificultad)
+            {
+                case "Fácil":
+                    dificultad = 1;
+                    break;
+                case "Normal":
+                    dificultad = 2;
+                    break;
+                case "Dificil":
+                    dificultad = 4;
+                    break;
+                default:
+                    dificultad = 1;
+                    break;
+            }
+            cargaNaves();
+            timerDisparoEnemigo.Interval = new TimeSpan(0,0,0,0,2000/dificultad);
+            timerDisparoEnemigo.Tick += tickDisparoEnemigo;
+            timerDisparoEnemigo.Start();
         }
         /**
          *Reproduce audio de la carpeta music 
@@ -536,20 +559,21 @@ namespace SpaceInvaders
             /* mediaPlayer = new MediaPlayerElement();
              mediaPlayer.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Music/" + nombreAudio));
              mediaPlayer.AutoPlay = true;*/
-            if (mediaPlayer.PlaybackSession.PlaybackState == MediaPlaybackState.Playing)
+            if (ElementSoundPlayer.State == ElementSoundPlayerState.On)
             {
-                mediaPlayer.Dispose();
-                Uri manifestUri = new Uri("ms-appx:///Assets/Music/" + nombreAudio);
-                mediaPlayer = new MediaPlayer();
-                mediaPlayer.Source = MediaSource.CreateFromUri(manifestUri);
-                mediaPlayer.Play();
-            }
-            else
-            {
-                Uri manifestUri = new Uri("ms-appx:///Assets/Music/" + nombreAudio);
-
-                mediaPlayer.Source = MediaSource.CreateFromUri(manifestUri);
-                mediaPlayer.Play();
+                if (mediaPlayer.CurrentState == MediaElementState.Playing)
+                {
+                    mediaPlayer.Stop();
+                    Uri manifestUri = new Uri("ms-appx:///Assets/Music/" + nombreAudio);
+                    mediaPlayer.Source = manifestUri;
+                    mediaPlayer.Play();
+                }
+                else
+                {
+                    Uri manifestUri = new Uri("ms-appx:///Assets/Music/" + nombreAudio);
+                    mediaPlayer.Source = manifestUri;
+                    mediaPlayer.Play();
+                }
             }
 
         }

@@ -1,4 +1,5 @@
 ﻿using Entities;
+using SpaceInvaders.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,6 +19,7 @@ namespace SpaceInvaders.ViewModels
         private DelegateCommand _cerrarAbrirSplit;
         private DelegateCommand _backCerrarSplit;
         private DelegateCommand _mostrarInstrucciones;
+        private String _mDificultadSeleccionada;
         private int _mIndexDificultadSeleccionada;
         private string _username1;
         private string _username2;
@@ -49,7 +51,18 @@ namespace SpaceInvaders.ViewModels
         #endregion
 
         #region Propiedades Publicas
-
+        public String mDificultadSeleccionada
+        {
+            get
+            {
+                return _mDificultadSeleccionada;
+            }
+            set
+            {
+                _mDificultadSeleccionada = value;
+                NotifyPropertyChanged("mDificultadSeleccionada");
+            }
+        }
         public string userName1
         {
 
@@ -214,13 +227,13 @@ namespace SpaceInvaders.ViewModels
         }
         private async void muestraInstrucciones()
         {
-            MessageDialog instrucciones = new MessageDialog("A y D para moverse y Espacio para disparar. \n" +
+            MessageDialog instrucciones = new MessageDialog("A y D para moverse, Espacio para disparar y ESC para pausa \n" +
                 "Para hacks, preguntar al GodHacker de segundo");
             await instrucciones.ShowAsync();
         }
         public void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-
+            JugadorConDificultad jugadorConDificultad;
             Frame navigationFrame = Window.Current.Content as Frame;
             if(userName1==""||userName2==""||userName3=="")
             {
@@ -229,7 +242,8 @@ namespace SpaceInvaders.ViewModels
                 userName3 = "R";
             }
             jugador.Nombre = userName1 + userName2 + userName3;
-            navigationFrame.Navigate(typeof(Game),jugador);
+            jugadorConDificultad = new JugadorConDificultad(jugador, mDificultadSeleccionada);
+            navigationFrame.Navigate(typeof(Game),jugadorConDificultad);
             
         }
         public void btnscore(object sender, RoutedEventArgs e)
