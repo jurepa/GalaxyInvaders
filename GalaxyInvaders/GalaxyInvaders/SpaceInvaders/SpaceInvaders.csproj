@@ -104,6 +104,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Defensa.cs" />
     <Compile Include="Models\Disparo.cs" />
     <Compile Include="Models\JugadorConDificultad.cs" />
     <Compile Include="Models\NaveAmiga.cs" />
@@ -127,13 +128,18 @@
     <Content Include="Assets\Images\Alien2.gif" />
     <Content Include="Assets\Images\Alien3.gif" />
     <Content Include="Assets\Images\D.gif" />
+    <Content Include="Assets\Images\Defend.png" />
+    <Content Include="Assets\Images\DefendRota.png" />
     <Content Include="Assets\Images\explosion.gif" />
+    <Content Include="Assets\Images\ExplosionMeteorito.gif" />
+    <Content Include="Assets\Images\ExplosionMeteorito2.gif" />
     <Content Include="Assets\Images\ExplosionMisil.gif" />
     <Content Include="Assets\Images\M.gif" />
     <Content Include="Assets\Images\MisilEnemigoPro.png" />
     <Content Include="Assets\Images\Pausa.png" />
     <Content Include="Assets\Music\disparo.wav" />
     <Content Include="Assets\Music\explosion.mp3" />
+    <Content Include="Assets\Music\romperroca.mp3" />
     <Content Include="Assets\Pixel_Emulator.ttf" />
     <None Include="SpaceInvaders_TemporaryKey.pfx" />
   </ItemGroup>

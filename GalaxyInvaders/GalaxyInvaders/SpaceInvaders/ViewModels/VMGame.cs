@@ -21,7 +21,7 @@ namespace SpaceInvaders.ViewModels
         private Jugador _jugador;
         private string _puntuacion;
         private double _opacidadPausa;
-        public DispatcherTimer dispatcherTimer { get; set; }
+        private DispatcherTimer dispatcherTimer { get; set; }
         //private Canvas _canvas;
         #endregion
         #region publicos
@@ -109,6 +109,9 @@ namespace SpaceInvaders.ViewModels
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             dispatcherTimer.Tick += timerTick;
             NotifyPropertyChanged("opacidadPausa");
+            //Defensas
+
+
         }
         private void timerTick(object sender, object e)
         {
@@ -175,6 +178,31 @@ namespace SpaceInvaders.ViewModels
         {
             GestoraJugadoresBL gestoraBL = new GestoraJugadoresBL();
             await gestoraBL.insertJugador(this.jugador);
+        }
+
+        //Eventos Botones tactiles
+        public void btnPointerPressed(object sender, PointerRoutedEventArgs e)//
+        {
+            Image image = (Image)sender;
+            if (image.Name.Equals("btnIzq"))//Comprobar qué boton es el que llega
+            {
+                left();
+                dispatcherTimer.Start();
+            }
+
+            if (image.Name.Equals("btnDcha"))
+            {
+                right();
+                dispatcherTimer.Start();
+            }
+        }
+        public void btnPointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Image image = (Image)sender;
+            if (image.Name.Equals("btnIzq") || image.Name.Equals("btnDcha"))//Comprobar qué boton es el que llega
+            {
+                dispatcherTimer.Stop();
+            }
         }
 
     }

@@ -9,7 +9,11 @@ Assets\Images\Alien3Pro.png
 Assets\Images\AlienNavePro.png
 Assets\Images\continue.png
 Assets\Images\D.gif
+Assets\Images\Defend.png
+Assets\Images\DefendRota.png
 Assets\Images\explosion.gif
+Assets\Images\ExplosionMeteorito.gif
+Assets\Images\ExplosionMeteorito2.gif
 Assets\Images\ExplosionMisil.gif
 Assets\Images\Fondo Space Invaders.jpg
 Assets\Images\Logo Inicio Sapce Invaders.png
@@ -24,6 +28,7 @@ Assets\Images\scores.png
 Assets\LockScreenLogo.scale-200.png
 Assets\Music\disparo.wav
 Assets\Music\explosion.mp3
+Assets\Music\romperroca.mp3
 Assets\Music\tetris.mp3
 Assets\Pixel_Emulator.ttf
 Assets\SplashScreen.scale-100.png

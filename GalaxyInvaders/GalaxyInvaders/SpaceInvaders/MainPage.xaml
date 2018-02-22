@@ -39,7 +39,7 @@
 
                         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="20">
                             <TextBlock Text="Dificultad" FontSize="30" TextAlignment="Center" Margin="0 0 0 20" ></TextBlock>
-                            <ComboBox Name="comboBox" HorizontalAlignment="Center" SelectedValuePath="ComboBoxOption" ItemsSource="{Binding mDificultades, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding mDificultadSeleccionada, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedIndex="{Binding mIndexDificultadSeleccionada}"  >
+                            <ComboBox Name="comboBox" HorizontalAlignment="Center" SelectedValuePath="ComboBoxOption" ItemsSource="{Binding mDificultades, Mode=TwoWay}" SelectedItem="{Binding mDificultadSeleccionada, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedIndex="{Binding mIndexDificultadSeleccionada}"  >
                             </ComboBox>
 
                         </StackPanel>
@@ -56,7 +56,7 @@
 
                         <StackPanel Orientation="Vertical" Grid.Row="3" Margin="20" HorizontalAlignment="Center">
                             <TextBlock Text="Sonido" HorizontalAlignment="Center"></TextBlock>
-                            <ToggleSwitch x:Name="ToggleSwitch1" OnContent="Callao" OffContent="A tope" IsOn="False" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            <ToggleSwitch x:Name="ToggleSwitch1" OnContent="Callao" OffContent="A tope" IsOn="{Binding isMuted, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock Text="Volumen" HorizontalAlignment="Center" Margin="0 20 0 0"></TextBlock>
                             <Slider x:Name="sliderVolumen" Width="200" Value="{Binding mVolumeSlider,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
                         </StackPanel>

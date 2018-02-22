@@ -550,11 +550,23 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\explosion.gif">
       <PackagePath>Assets\Images\explosion.gif</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\ExplosionMeteorito.gif">
+      <PackagePath>Assets\Images\ExplosionMeteorito.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\ExplosionMeteorito2.gif">
+      <PackagePath>Assets\Images\ExplosionMeteorito2.gif</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\ExplosionMisil.gif">
       <PackagePath>Assets\Images\ExplosionMisil.gif</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\M.gif">
       <PackagePath>Assets\Images\M.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Defend.png">
+      <PackagePath>Assets\Images\Defend.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\DefendRota.png">
+      <PackagePath>Assets\Images\DefendRota.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\MisilEnemigoPro.png">
       <PackagePath>Assets\Images\MisilEnemigoPro.png</PackagePath>
@@ -643,6 +655,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Music\explosion.mp3">
       <PackagePath>Assets\Music\explosion.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Music\romperroca.mp3">
+      <PackagePath>Assets\Music\romperroca.mp3</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Music\tetris.mp3">
       <PackagePath>Assets\Music\tetris.mp3</PackagePath>

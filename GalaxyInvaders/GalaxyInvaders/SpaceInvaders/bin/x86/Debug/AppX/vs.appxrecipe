@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>257D5C0A07846CCCE2017B852822809D596C05526730F3716239CA303C64E072</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>849D3D38148A0E731456131F1FCB7740B3EA51B03F3FC541E68FC65A6847C54D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0715efcf-eba3-47a3-a789-29b1c46da80f_1.0.0.0_x86__88hb40tn070bc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0715efcf-eba3-47a3-a789-29b1c46da80f_88hb40tn070bc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0715efcf-eba3-47a3-a789-29b1c46da80f</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T13:10:54.080</Modified>
+      <Modified>2018-02-22T11:39:41.896</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\SpaceInvaders.exe">
       <PackagePath>entrypoint\SpaceInvaders.exe</PackagePath>
-      <Modified>2018-02-19T13:10:52.225</Modified>
+      <Modified>2018-02-22T11:39:40.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\.nuget\packages\newtonsoft.json\10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -701,15 +701,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\Capa-BL\bin\x86\Debug\Capa-BL.dll">
       <PackagePath>Capa-BL.dll</PackagePath>
-      <Modified>2018-02-16T11:59:19.841</Modified>
+      <Modified>2018-02-22T11:16:24.271</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\Entities\bin\x86\Debug\Entities.dll">
       <PackagePath>Entities.dll</PackagePath>
-      <Modified>2018-02-16T11:59:17.063</Modified>
+      <Modified>2018-02-22T11:16:22.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\Capa-BL\bin\x86\Debug\Capa-DAL.dll">
       <PackagePath>Capa-DAL.dll</PackagePath>
-      <Modified>2018-02-16T11:59:18.900</Modified>
+      <Modified>2018-02-22T11:16:23.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\A.gif">
       <PackagePath>Assets\Images\A.gif</PackagePath>
@@ -735,6 +735,14 @@
       <PackagePath>Assets\Images\explosion.gif</PackagePath>
       <Modified>2018-02-05T12:57:09.164</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\ExplosionMeteorito.gif">
+      <PackagePath>Assets\Images\ExplosionMeteorito.gif</PackagePath>
+      <Modified>2018-02-19T13:21:10.992</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\ExplosionMeteorito2.gif">
+      <PackagePath>Assets\Images\ExplosionMeteorito2.gif</PackagePath>
+      <Modified>2018-02-19T13:25:05.587</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\ExplosionMisil.gif">
       <PackagePath>Assets\Images\ExplosionMisil.gif</PackagePath>
       <Modified>2018-02-15T09:00:29.513</Modified>
@@ -743,13 +751,21 @@
       <PackagePath>Assets\Images\M.gif</PackagePath>
       <Modified>2018-02-09T13:03:57.155</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Defend.png">
+      <PackagePath>Assets\Images\Defend.png</PackagePath>
+      <Modified>2018-02-16T12:18:29.813</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\DefendRota.png">
+      <PackagePath>Assets\Images\DefendRota.png</PackagePath>
+      <Modified>2018-02-19T12:53:16.579</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\MisilEnemigoPro.png">
       <PackagePath>Assets\Images\MisilEnemigoPro.png</PackagePath>
       <Modified>2018-02-15T08:46:02.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Pausa.png">
       <PackagePath>Assets\Images\Pausa.png</PackagePath>
-      <Modified>2018-02-16T12:22:28.247</Modified>
+      <Modified>2018-02-22T10:47:22.295</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Alien1Pro.png">
       <PackagePath>Assets\Images\Alien1Pro.png</PackagePath>
@@ -798,22 +814,22 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T12:08:59.497</Modified>
+      <Modified>2018-01-29T07:22:44.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T12:08:59.497</Modified>
+      <Modified>2018-01-29T07:22:44.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T12:08:59.497</Modified>
+      <Modified>2018-01-29T07:22:44.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T12:08:59.497</Modified>
+      <Modified>2018-01-29T07:22:44.440</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -822,7 +838,7 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T12:08:59.497</Modified>
+      <Modified>2018-01-29T07:22:44.428</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
@@ -851,15 +867,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Music\disparo.wav">
       <PackagePath>Assets\Music\disparo.wav</PackagePath>
-      <Modified>2018-02-16T12:58:27.728</Modified>
+      <Modified>2018-02-22T09:17:05.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Music\explosion.mp3">
       <PackagePath>Assets\Music\explosion.mp3</PackagePath>
-      <Modified>2018-02-16T12:58:27.756</Modified>
+      <Modified>2018-02-22T09:17:03.669</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Music\romperroca.mp3">
+      <PackagePath>Assets\Music\romperroca.mp3</PackagePath>
+      <Modified>2018-02-22T11:15:38.533</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Music\tetris.mp3">
       <PackagePath>Assets\Music\tetris.mp3</PackagePath>
-      <Modified>2018-01-25T09:51:46.821</Modified>
+      <Modified>2018-02-22T09:17:05.482</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Pixel_Emulator.ttf">
       <PackagePath>Assets\Pixel_Emulator.ttf</PackagePath>
@@ -875,7 +895,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\SpaceInvaders.xr.xml">
       <PackagePath>SpaceInvaders.xr.xml</PackagePath>
-      <Modified>2018-02-16T12:43:41.922</Modified>
+      <Modified>2018-02-22T11:36:10.918</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -884,11 +904,11 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T13:10:53.771</Modified>
+      <Modified>2018-02-22T11:39:41.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x86\Debug\Core\SpaceInvaders.exe">
       <PackagePath>SpaceInvaders.exe</PackagePath>
-      <Modified>2018-02-19T13:10:54.073</Modified>
+      <Modified>2018-02-22T11:39:41.886</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
