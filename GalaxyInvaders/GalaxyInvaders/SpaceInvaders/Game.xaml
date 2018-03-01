@@ -37,9 +37,9 @@
             </Canvas>
         </Border>
         <RelativePanel x:Name="relativeBotonesTactiles" >
-            <Image x:Name="btnIzq" Width="100"  PointerPressed="{x:Bind vMGame.btnPointerPressed}" PointerExited="{x:Bind vMGame.btnPointerExited}"  Source="ms-appx:///Assets/Images/options.png" Margin="300 0 0 30"  RelativePanel.AlignBottomWithPanel="True"  />
-            <Image x:Name="btnDcha" Width="100" PointerPressed="{x:Bind vMGame.btnPointerPressed}" PointerExited="{x:Bind vMGame.btnPointerExited}" Source="ms-appx:///Assets/Images/options.png"  Margin="50 0 0 30" RelativePanel.RightOf="btnIzq" RelativePanel.AlignBottomWithPanel="True" />
-            <Image x:Name="btnDisparo" Width="100" Source="ms-appx:///Assets/Images/options.png" Margin="0 0 400 30" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" PointerExited="btnDisparo_PointerExited" />
+            <Image x:Name="btnIzq" Width="80" Source="ms-appx:///Assets/Images/FlechaIzq.png"  PointerPressed="{x:Bind vMGame.btnPointerPressed}" PointerExited="{x:Bind vMGame.btnPointerExited}"  Margin="100 0 0 30"  RelativePanel.AlignBottomWithPanel="True"  />
+            <Image x:Name="btnDcha" Width="80" PointerPressed="{x:Bind vMGame.btnPointerPressed}" PointerExited="{x:Bind vMGame.btnPointerExited}" Source="ms-appx:///Assets/Images/FlechaDer.png"  Margin="50 0 0 30" RelativePanel.RightOf="btnIzq" RelativePanel.AlignBottomWithPanel="True" />
+            <Image x:Name="btnDisparo" Width="80" Source="ms-appx:///Assets/Images/Crosshair2.png" Margin="0 0 150 30" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" PointerExited="btnDisparo_PointerExited" />
         </RelativePanel>
         <!--<TextBox x:Name="text" KeyDown="text_KeyDown" />-->
     </Grid>

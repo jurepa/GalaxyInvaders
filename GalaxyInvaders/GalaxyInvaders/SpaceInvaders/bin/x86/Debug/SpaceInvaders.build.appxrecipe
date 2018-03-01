@@ -562,17 +562,46 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\M.gif">
       <PackagePath>Assets\Images\M.gif</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Crosshair2.png">
+      <PackagePath>Assets\Images\Crosshair2.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Defend.png">
       <PackagePath>Assets\Images\Defend.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\DefendRota.png">
       <PackagePath>Assets\Images\DefendRota.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\FlechaDer.png">
+      <PackagePath>Assets\Images\FlechaDer.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\FlechaIzq.png">
+      <PackagePath>Assets\Images\FlechaIzq.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\MisilEnemigoPro.png">
       <PackagePath>Assets\Images\MisilEnemigoPro.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Pausa.png">
       <PackagePath>Assets\Images\Pausa.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\Alien1Pro.png">
       <PackagePath>Assets\Images\Alien1Pro.png</PackagePath>
@@ -607,6 +636,26 @@
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Images\scores.png">
       <PackagePath>Assets\Images\scores.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -621,6 +670,110 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\LockScreenLogo.scale-200.png">
@@ -640,10 +793,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\Assets\Wide310x150Logo.scale-200.png">

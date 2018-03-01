@@ -141,4 +141,3 @@ C:\Users\mgonzalez\Desktop\Proyectos Galaxy\GalaxyInvaders\Entities\obj\x86\Debu
 C:\Users\mgonzalez\Desktop\Proyectos Galaxy\GalaxyInvaders\Entities\obj\x86\Debug\qualifiers.txt
 C:\Users\mgonzalez\Desktop\Proyectos Galaxy\GalaxyInvaders\Entities\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\mgonzalez\Desktop\Proyectos Galaxy\GalaxyInvaders\Entities\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\Entities\obj\x86\Debug\Entities.csprojResolveAssemblyReference.cache

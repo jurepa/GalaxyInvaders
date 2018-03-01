@@ -1,0 +1,6 @@
+MainPackage=C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\ARM\Debug\SpaceInvaders_0.1.0.0_ARM_Debug.appx
+SymbolPackage=\\servidor\free\Compartir cosas\SpaceInvaders_0.1.0.0_Debug_Test\SpaceInvaders_0.1.0.0_ARM_Debug.appxsym
+ResourcePack=C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\ARM\Debug\SpaceInvaders_0.1.0.0_scale-100.appx
+ResourcePack=C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\ARM\Debug\SpaceInvaders_0.1.0.0_scale-125.appx
+ResourcePack=C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\ARM\Debug\SpaceInvaders_0.1.0.0_scale-150.appx
+ResourcePack=C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\ARM\Debug\SpaceInvaders_0.1.0.0_scale-400.appx

@@ -1,0 +1,2 @@
+MainPackage=C:\Users\pjarana\Desktop\GitHub\GalaxyInvaders\GalaxyInvaders\GalaxyInvaders\SpaceInvaders\bin\x64\Debug\SpaceInvaders_0.1.0.0_x64_Debug.appx
+SymbolPackage=\\servidor\free\Compartir cosas\SpaceInvaders_0.1.0.0_Debug_Test\SpaceInvaders_0.1.0.0_x64_Debug.appxsym

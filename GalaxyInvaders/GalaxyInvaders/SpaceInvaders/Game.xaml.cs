@@ -39,6 +39,7 @@ namespace SpaceInvaders
         public int cantidadNaves;
         public int cantidadDefensas;
         private int dificultad;
+        private JugadorConDificultad jugadorActual;
         //private bool haPulsado;
         //private bool haLevantado;
         public DispatcherTimer timer = new DispatcherTimer();
@@ -61,7 +62,6 @@ namespace SpaceInvaders
             //haLevantado = false;
             this.InitializeComponent();
             
-            cargaNaves();
             cargaDefensas();
             //Window.Current.Content.KeyDown += KeyDownEvent;
             cantidadNaves = 60;
@@ -262,6 +262,7 @@ namespace SpaceInvaders
             hasGanadoContentDialog.Title = "Victoria!!";
             hasGanadoContentDialog.Content = "Enhorabuena, has hecho " + this.vMGame.jugador.Puntuacion + " puntos";
             hasGanadoContentDialog.PrimaryButtonText = "Submit Score";
+            hasGanadoContentDialog.SecondaryButtonText = "Restart";
             //hasGanadoContentDialog.IsFocusEngaged=false;
             //hasGanadoContentDialog.AllowFocusOnInteraction = false;
             //var buttonSpace = (Button) Window.Current.CoreWindow.GetKeyState(VirtualKey.Space);
@@ -281,6 +282,10 @@ namespace SpaceInvaders
             {
                 this.vMGame.submitScore();
                 this.Frame.Navigate(typeof(MainPage));
+            }
+            else if(resultado==ContentDialogResult.Secondary)
+            {
+                this.Frame.Navigate(typeof(Game),jugadorActual);
             }
         }
 
@@ -513,7 +518,28 @@ namespace SpaceInvaders
 
                 case 0:
                     vMGame.player.vida1 = 0;
+                    mostrarPerdedor();
                     break;
+            }
+        }
+
+        public async void mostrarPerdedor()
+        {
+            ContentDialog perdedorDialog = new ContentDialog();
+            perdedorDialog.Title = "Ooooh, has perdido...";
+            perdedorDialog.Content = $"Has hecho {this.vMGame.jugador.Puntuacion} puntos";
+            perdedorDialog.PrimaryButtonText = "Submit Score";
+            perdedorDialog.SecondaryButtonText = "Restart";
+            ContentDialogResult contentDialogResult = await perdedorDialog.ShowAsync();
+
+            if (contentDialogResult == ContentDialogResult.Primary)
+            {
+                this.vMGame.submitScore();
+                this.Frame.Navigate(typeof(MainPage));
+            }
+            else if (contentDialogResult == ContentDialogResult.Secondary)
+            {
+                this.Frame.Navigate(typeof(Game),jugadorActual);
             }
         }
 
@@ -898,6 +924,7 @@ namespace SpaceInvaders
             base.OnNavigatedTo(e);
 
             var parameters = (JugadorConDificultad)e.Parameter;
+            jugadorActual = parameters;
             this.vMGame.jugador = new Jugador();
             this.vMGame.jugador.ID = parameters.ID;
             this.vMGame.jugador.Nombre = parameters.Nombre;

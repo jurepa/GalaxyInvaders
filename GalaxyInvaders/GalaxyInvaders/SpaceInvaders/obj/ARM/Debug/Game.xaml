@@ -1,0 +1,47 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="SpaceInvaders.Game"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpaceInvaders"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:vm="using:SpaceInvaders.ViewModels"
+     >
+
+    
+    <Page.DataContext>
+        <vm:VMGame></vm:VMGame>
+    </Page.DataContext>
+
+    <Page.Resources>
+    </Page.Resources>
+
+    <Grid x:ConnectionId='2' x:Name="grid" Background="Black"                             >
+        <RelativePanel>
+            <Image x:ConnectionId='10' x:Name="vida1" Width="70" Height="70" Margin="20 20 0 0" Source="ms-appx:///Assets/Images/D.gif" Opacity="{Binding player.vida1, Mode=TwoWay}"  />
+            <Image x:ConnectionId='11' x:Name="vida2" Width="70" Height="70" Margin="10 20 0 0" Source="ms-appx:///Assets/Images/A.gif" Opacity="{Binding player.vida2, Mode=TwoWay}" RelativePanel.RightOf="vida1" />
+            <Image x:ConnectionId='12' x:Name="vida3" Width="70" Height="70" Margin="10 20 0 0" Source="ms-appx:///Assets/Images/M.gif" Opacity="{Binding player.vida3, Mode=TwoWay}" RelativePanel.RightOf="vida2" />
+            <TextBlock x:ConnectionId='13' Name="txtpuntuacion" Text="SCORE: " Margin="0 30 10 0" FontFamily="Assets\Pixel_Emulator.ttf#Pixel Emulator" Foreground="Green" RelativePanel.LeftOf="puntuacion" FontSize="60"/>
+            <TextBlock x:ConnectionId='14' Name="puntuacion" Text="{Binding puntuacion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 30 200 0" FontFamily="Assets\Pixel_Emulator.ttf#Pixel Emulator" Foreground="Green" RelativePanel.AlignRightWithPanel="True" FontSize="60"/>
+
+        </RelativePanel>
+        <Border BorderBrush="Green" BorderThickness="3" MaxHeight="600" MaxWidth="1350" Margin="10">
+            <Canvas x:ConnectionId='7' x:Name="canvas" MaxHeight="600" MaxWidth="1350">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Images/Fondo Space Invaders.jpg" />
+                </Canvas.Background>
+                <Image x:ConnectionId='8' Name="imagenPausa" Canvas.Top="250" Canvas.Left="450" Canvas.ZIndex="100" Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="/Assets/Images/Pausa.png"/>
+                <Image x:ConnectionId='9' x:Name="player" Source="{Binding player.imagen}" Height="58" Width="72" Opacity="{Binding player.visible,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                       Canvas.Left="{Binding player.posicionX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="534"  />
+            </Canvas>
+        </Border>
+        <RelativePanel x:ConnectionId='3' x:Name="relativeBotonesTactiles" >
+            <Image x:ConnectionId='4' x:Name="btnIzq" Width="80" Source="ms-appx:///Assets/Images/FlechaIzq.png"                                                                                                       Margin="100 0 0 30"  RelativePanel.AlignBottomWithPanel="True"  />
+            <Image x:ConnectionId='5' x:Name="btnDcha" Width="80"                                                                                                     Source="ms-appx:///Assets/Images/FlechaDer.png"  Margin="50 0 0 30" RelativePanel.RightOf="btnIzq" RelativePanel.AlignBottomWithPanel="True" />
+            <Image x:ConnectionId='6' x:Name="btnDisparo" Width="80" Source="ms-appx:///Assets/Images/Crosshair2.png" Margin="0 0 150 30" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True"                                          />
+        </RelativePanel>
+        <!--<TextBox x:Name="text" KeyDown="text_KeyDown" />-->
+    </Grid>
+</Page>
+
