@@ -41,6 +41,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Opacity" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Margin" />
       <RootMethod Name="GetAlignBottomWithPanel" />
@@ -53,18 +54,18 @@
       <RootMethod Name="SetAlignHorizontalCenterWithPanel" />
       <RootMethod Name="GetAlignVerticalCenterWithPanel" />
       <RootMethod Name="SetAlignVerticalCenterWithPanel" />
-      <RootMethod Name="GetLeftOf" />
-      <RootMethod Name="SetLeftOf" />
-      <RootMethod Name="GetAlignVerticalCenterWith" />
-      <RootMethod Name="SetAlignVerticalCenterWith" />
+      <RootMethod Name="GetBelow" />
+      <RootMethod Name="SetBelow" />
       <RootMethod Name="GetAlignLeftWithPanel" />
       <RootMethod Name="SetAlignLeftWithPanel" />
       <RootMethod Name="GetAlignTopWithPanel" />
       <RootMethod Name="SetAlignTopWithPanel" />
+      <RootMethod Name="GetLeftOf" />
+      <RootMethod Name="SetLeftOf" />
+      <RootMethod Name="GetAlignVerticalCenterWith" />
+      <RootMethod Name="SetAlignVerticalCenterWith" />
       <RootMethod Name="GetAbove" />
       <RootMethod Name="SetAbove" />
-      <RootMethod Name="GetBelow" />
-      <RootMethod Name="SetBelow" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -119,9 +120,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Source" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="Opacity" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Name" />
       <RootEvent Name="PointerPressed" />
       <RootEvent Name="PointerExited" />
     </RootType>
@@ -147,6 +148,10 @@
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="Path" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
+      <RootProperty Name="Opacity" />
     </RootType>
     <RootType FullName="SpaceInvaders.Game" />
     <RootType FullName="SpaceInvaders.ViewModels.MainPageGameVM" />

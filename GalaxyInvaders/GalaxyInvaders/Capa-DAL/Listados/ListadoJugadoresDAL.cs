@@ -13,7 +13,7 @@ namespace Capa_DAL.Listados
     public class ListadoJugadoresDAL
     {
         /// <summary>
-        /// Returns list with persons in the Data Base
+        /// Método que devuelve el listado de jugadores
         /// </summary>
         /// <returns></returns>
         public async Task<List<Jugador>> getJugadores()

@@ -10,6 +10,10 @@ namespace Capa_BL.Listados
 {
     public class ListadoJugadoresBL
     {
+        /// <summary>
+        /// Método que devuelve el listado de jugadores
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Jugador>> getListadoJugadores()
         {
             ListadoJugadoresDAL listadoJugadoresDAL = new ListadoJugadoresDAL();

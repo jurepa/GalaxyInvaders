@@ -19,6 +19,11 @@
 
     <Grid x:Name="grid" Background="Black" Loaded="allowfocus_Loaded"  >
         <RelativePanel>
+            <RelativePanel  Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True">
+                <RelativePanel.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.8"/>
+                </RelativePanel.Background>
+            </RelativePanel>
             <Image x:Name="vida1" Width="70" Height="70" Margin="20 20 0 0" Source="ms-appx:///Assets/Images/D.gif" Opacity="{Binding player.vida1, Mode=TwoWay}"  />
             <Image x:Name="vida2" Width="70" Height="70" Margin="10 20 0 0" Source="ms-appx:///Assets/Images/A.gif" Opacity="{Binding player.vida2, Mode=TwoWay}" RelativePanel.RightOf="vida1" />
             <Image x:Name="vida3" Width="70" Height="70" Margin="10 20 0 0" Source="ms-appx:///Assets/Images/M.gif" Opacity="{Binding player.vida3, Mode=TwoWay}" RelativePanel.RightOf="vida2" />
@@ -31,7 +36,26 @@
                 <Canvas.Background>
                     <ImageBrush ImageSource="ms-appx:///Assets/Images/Fondo Space Invaders.jpg" />
                 </Canvas.Background>
-                <Image Name="imagenPausa" Canvas.Top="250" Canvas.Left="450" Canvas.ZIndex="100" Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="/Assets/Images/Pausa.png"/>
+                <!--<Image Name="imagenPausa" Canvas.Top="250" Canvas.Left="450" Canvas.ZIndex="100" Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="/Assets/Images/Pausa.png"/>-->
+                <RelativePanel   Canvas.Top="150" Canvas.Left="450" Canvas.ZIndex="100" Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
+                    <RelativePanel>
+
+
+                        <Image Name="imagenPausa"   RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="/Assets/Images/Pausa.png"/>
+
+                        <Image Width="100" PointerPressed="btnSeguirclick" Source="ms-appx:///Assets/Images/Resume.png"  x:Name="btnBackMenu"  RelativePanel.Below="imagenPausa"  RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Margin="5"  Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   />
+
+
+                        <Image  x:Name="btnReiniciar" PointerPressed="btnReiniciarclick" RelativePanel.Below="imagenPausa" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="5" Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  Width="100" Source="ms-appx:///Assets/Images/restart.png"  />
+
+
+                        <Image  Width="100" PointerPressed="btnBackMenuClick" Source="ms-appx:///Assets/Images/Exit.png"  x:Name="btnContinue"  RelativePanel.Below="imagenPausa" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="5" Opacity="{Binding opacidadPausa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+
+
+                    </RelativePanel>
+                </RelativePanel>
+
                 <Image x:Name="player" Source="{Binding player.imagen}" Height="58" Width="72" Opacity="{Binding player.visible,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                        Canvas.Left="{Binding player.posicionX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="534"  />
             </Canvas>

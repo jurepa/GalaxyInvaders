@@ -12,6 +12,7 @@ Assets\Images\Crosshair2.png
 Assets\Images\D.gif
 Assets\Images\Defend.png
 Assets\Images\DefendRota.png
+Assets\Images\Exit.png
 Assets\Images\explosion.gif
 Assets\Images\ExplosionMeteorito.gif
 Assets\Images\ExplosionMeteorito2.gif
@@ -27,6 +28,8 @@ Assets\Images\options.png
 Assets\Images\Pausa.png
 Assets\Images\play.png
 Assets\Images\PlayerPro.png
+Assets\Images\Restart.png
+Assets\Images\Resume.png
 Assets\Images\scores.png
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-125.png

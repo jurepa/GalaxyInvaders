@@ -15,7 +15,7 @@ namespace Capa_BL.Gestoras
         /// Actualiza un jugador de la base de datos
         /// </summary>
         /// <param name="persona"></param>
-        /// <returns>Devuelve un entero con el número de filas afectadas</returns>
+        /// <returns></returns>
         public async Task<HttpStatusCode> updateJugador(Jugador jugador)
         {
             GestoraJugadoresDAL gestoraJugadoresDAL = new GestoraJugadoresDAL();
@@ -37,7 +37,7 @@ namespace Capa_BL.Gestoras
         /// Elimina un jugador de la base de datos
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>Devuelve un entero con el número de filas afectadas</returns>
+        /// <returns></returns>
         public async Task<HttpStatusCode> deleteJugador(int id)
         {
             GestoraJugadoresDAL gestoraJugadoresDAL = new GestoraJugadoresDAL();
@@ -59,7 +59,7 @@ namespace Capa_BL.Gestoras
         /// Inserta un jugador en la base de datos
         /// </summary>
         /// <param name="jugador"></param>
-        /// <returns>Devuelve un entero que es el número de filas afectadas</returns>
+        /// <returns></returns>
         public async Task<HttpStatusCode> insertJugador(Jugador jugador)
         {
             GestoraJugadoresDAL gestoraJugadoresDAL = new GestoraJugadoresDAL();

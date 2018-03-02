@@ -113,11 +113,33 @@ namespace SpaceInvaders.ViewModels
 
 
         }
+
+        public NaveAmiga Player
+        {
+            get
+            {
+                return _player;
+            }
+            set
+            {
+                _player = value;
+            }
+        }
+        /// <summary>
+        /// Método que se llama cada 1 milsec para mover la nave
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timerTick(object sender, object e)
         {
             move();
         }
 
+        /// <summary>
+        /// Evento que se da al pulsar una tecla, en este caso, A y D para mover la nave
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.A)
@@ -133,6 +155,11 @@ namespace SpaceInvaders.ViewModels
             }
 
         }
+        /// <summary>
+        /// Evento que se da al levantar una tecla, en este caso, A o D para parar la nave
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.A || e.Key == VirtualKey.D)
@@ -140,6 +167,9 @@ namespace SpaceInvaders.ViewModels
                 dispatcherTimer.Stop();
             }
         }
+        /// <summary>
+        /// Método que se encarga de mover la nave y controlar que no se salga del canvas
+        /// </summary>
         public void move()
         {
             Double posicionFutura = _player.posicionX + _player.velocidad;
@@ -149,6 +179,9 @@ namespace SpaceInvaders.ViewModels
             }
             NotifyPropertyChanged("player");
         }
+        /// <summary>
+        /// Método que se encarga de mover la nave a la derecha
+        /// </summary>
         public void right()
         {
             //_velocidad = 10;
@@ -161,6 +194,9 @@ namespace SpaceInvaders.ViewModels
                 _player.velocidad = 0;
             }
         }
+        /// <summary>
+        /// Método que se encarga de mover la nave a la izquierda
+        /// </summary>
         public void left()
         {
             //_velocidad = -10;
@@ -173,14 +209,20 @@ namespace SpaceInvaders.ViewModels
                 _player.velocidad = 0;
             }
         }
-
+        /// <summary>
+        /// Método que se encarga de subir el jugador a la api con su puntuación
+        /// </summary>
         public async void submitScore()
         {
             GestoraJugadoresBL gestoraBL = new GestoraJugadoresBL();
             await gestoraBL.insertJugador(this.jugador);
         }
 
-        //Eventos Botones tactiles
+        /// <summary>
+        /// KeyDown en botones
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btnPointerPressed(object sender, PointerRoutedEventArgs e)//
         {
             Image image = (Image)sender;
@@ -196,6 +238,11 @@ namespace SpaceInvaders.ViewModels
                 dispatcherTimer.Start();
             }
         }
+        /// <summary>
+        /// KeyUp en botones
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btnPointerExited(object sender, PointerRoutedEventArgs e)
         {
             Image image = (Image)sender;

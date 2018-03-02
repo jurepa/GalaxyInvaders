@@ -135,6 +135,7 @@
     <Content Include="Assets\Images\D.gif" />
     <Content Include="Assets\Images\Defend.png" />
     <Content Include="Assets\Images\DefendRota.png" />
+    <Content Include="Assets\Images\Exit.png" />
     <Content Include="Assets\Images\explosion.gif" />
     <Content Include="Assets\Images\ExplosionMeteorito.gif" />
     <Content Include="Assets\Images\ExplosionMeteorito2.gif" />
@@ -144,6 +145,8 @@
     <Content Include="Assets\Images\M.gif" />
     <Content Include="Assets\Images\MisilEnemigoPro.png" />
     <Content Include="Assets\Images\Pausa.png" />
+    <Content Include="Assets\Images\Restart.png" />
+    <Content Include="Assets\Images\Resume.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
